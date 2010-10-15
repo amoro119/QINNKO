@@ -1,0 +1,67 @@
+<!--@subject Welcome, {{var customer.name}}! @-->
+
+<style type="text/css">
+body,td { color:#2f2f2f; font:13px Verdana, Arial, Helvetica, sans-serif; line-height:20px;}
+a{color:#BC380C; text-decoration:none;}
+</style>
+
+<div style="font:13px Verdana, Arial, Helvetica, sans-serif;">
+    <table cellspacing="0" cellpadding="0" border="0" width="98%" style="margin-top:10px; font:13px Verdana, Arial, Helvetica, sans-serif; margin-bottom:10px;">
+        <tr>
+            <td align="center" valign="top">
+                <!-- [ header starts here] -->
+                <table cellspacing="0" cellpadding="0" border="0" width="615">
+                    <tr>
+                        <td valign="top">
+                            <a href="{{store url=""}}"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="Magento"  style="margin-bottom:10px; color:#484747;" border="0"/></a></td>
+                    </tr>
+                </table>
+
+                <!-- [ middle starts here] -->
+                <table cellspacing="0" cellpadding="0" border="0" width="575">
+                    <tr>
+                        <td valign="top">
+						<p><strong>您好，{{var customer.name}}</strong>：<br/>
+                            欢迎光临云动力。请点击页面右上方<a href="{{store url="customer/account/"}}" style="color:#1E7EC8;"><img 
+							src="{{skin url="images/account_email_login.gif" _area='frontend'}}" border="0" align="absmiddle"/></a>按钮，输入电子邮件地址和密码登录。您的注册帐户资料如下：</p>
+							<h3 style="color:#484747; font-size:13px; display:block; line-height:36px;"><img  
+							src="{{skin url="images/icon_emailtitle.gif" _area='frontend'}}" border="0" align="absmiddle"/>请用下面的帐号登录：</h3>
+                            
+                            <table width="100%" border="0" cellpadding="10" cellspacing="10" bgcolor="#F3F9EC">
+  <tr>
+    <td>电子邮件:<span style="color:#BC380C;"> <a href="#" style="color:#BC380C; cursor:default;">{{var customer.email}}</a></span><br/>
+                                密码:&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#BC380C">{{var customer.password}}</span></td>
+  </tr>
+</table>
+
+                          
+
+                      <p>登录您的帐号后，可以：</p>
+
+                            <ul>
+                                <li>购物时结帐更迅速</li>
+                                <li>查看订单状态</li>
+                                <li>查看历史订单</li>
+                                <li>修改账户信息</li>
+                                <li>修改密码</li>
+                                <li>保存多个地址(给亲戚朋友购物！)</li>
+                            </ul>
+
+                            <p>有关您的注册账户或购物的任何疑问，请联系我们：</p>
+                            <ul>
+                                <li>通信地址：510000 广州市天河路596号Ｃ2107，云动力客户服务部 收</li>
+                                <li>电子邮件：<a href="mailto:service@ydl.me" style="color:#000; text-decoration:none;">service@ydl.me</a></li>
+                                <li>电话：(020)85561586</li>
+                            </ul>
+                                                        
+                            <p>多谢惠顾！</p>
+                            <p><strong>云动力</strong></p>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</div>

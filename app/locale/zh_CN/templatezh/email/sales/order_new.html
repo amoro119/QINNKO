@@ -1,0 +1,87 @@
+
+<style type="text/css">
+    body,td { color:#484747; font:13px Verdana, Arial, Helvetica, sans-serif; }
+	a{color:#484747; text-decoration:none; font-size:13px;}
+</style>
+
+<div style="font:13px  Verdana, Arial, Helvetica, sans-serif; width:615px;">
+<table cellspacing="0" cellpadding="0" border="0" width="615" style="margin-top:10px; font:Verdana, Arial, Helvetica, sans-serif; margin-bottom:10px;">
+<tr>
+    <td align="center" valign="top">
+        <!-- [ header starts here] -->
+        <table cellspacing="0" cellpadding="0" border="0" width="615">
+            <tr>
+                <td valign="top"><a href="{{store url=""}}"><img src="{{skin url="images/logo_email.gif" _area='frontend'}}" alt="Magento"  style="margin-bottom:10px;" border="0"/></a></td>
+            </tr>
+        </table>
+        <!-- [ middle starts here] -->
+        <table cellspacing="0" cellpadding="0" border="0" width="575" style="padding:10px; margin:0 auto;color:#484747;">
+            <tr>
+                <td valign="top">
+                    <p>
+                        <strong>您好，{{var order.getCustomerName()}}</strong>,<br/><br/>
+                        感谢您在{{var order.getStoreGroupName()}}的订购。
+                        发货之后我们会立即给您发送邮件，附带查询订单的链接。
+                        您可以通过<a href="{{store url="customer/account/"}}" style="color:#484747; text-decoration:none;">登录您的帐户</a>查看订单状态.
+                        关于订单如有任何疑问，请发邮件至<a href="mailto:service@ydl.me" style="color:#484747; text-decoration:none;">service@ydl.me</a> 或拨打电话<span class="nobr">(800) DEMO-NUMBER</span> 周一至周五，早上8点至下午5点。
+                    </p>
+                    <p>您的订单确认如下。感谢您的惠顾。</p>
+
+                    <h3 style="border-bottom:1px solid #adadad;  padding-bottom:1px;color:#484747; font-size:13px; display:block; line-height:36px; "><img src="{{skin url="images/icon_emailtitle.gif" _area='frontend'}}"  border="0" align="absmiddle" /> 您的订单#{{var order.increment_id}} <span style="font-size:12px; font-weight:normal;">(订单日期  {{var order.getCreatedAtFormated('long')}})</span></h3>
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th align="left" width="48.5%" style="padding:5px 9px 6px 9px; border-top:1px solid #EBEBEB; border-left:1px solid #EBEBEB;border-right:1px solid #EBEBEB;border-bottom:0; line-height:1em;"><h4 style="font-size:13px; border-bottom:1px solid #ADADAD; line-height:20px; padding-left:10px;">账单地址</h4></th>
+                            <th width="3%"></th>
+                            <th align="left" width="48.5%" style="padding:5px 9px 6px 9px; border-top:1px solid #EBEBEB; border-left:1px solid #EBEBEB;border-right:1px solid #EBEBEB;border-bottom:0; line-height:1em;"><h4 style="font-size:13px; border-bottom:1px solid #ADADAD; line-height:20px; padding-left:10px;">支付方式</h4></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td valign="top" style="padding:7px 9px 9px 9px; border-bottom:1px solid #EBEBEB; border-left:1px solid #EBEBEB;border-right:1px solid #EBEBEB;  ">
+                                {{var order.getBillingAddress().format('html')}}
+                            </td>
+                            <td>&nbsp;</td>
+                            <td valign="top" style="padding:7px 9px 9px 9px; border-bottom:1px solid #EBEBEB; border-left:1px solid #EBEBEB;border-right:1px solid #EBEBEB; ">
+                                {{var payment_html}}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    {{depend order.getIsNotVirtual()}}
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th align="left" width="48.5%" style="padding:5px 9px 6px 9px; border-top:1px solid #EBEBEB; border-left:1px solid #EBEBEB;border-right:1px solid #EBEBEB;border-bottom:0; line-height:1em;"><h4 style="font-size:13px; border-bottom:1px solid #ADADAD; line-height:20px; padding-left:10px;">配送地址</h4></th>
+                            <th width="3%"></th>
+                            <th align="left" width="48.5%" style="padding:5px 9px 6px 9px;border-top:1px solid #EBEBEB; border-left:1px solid #EBEBEB;border-right:1px solid #EBEBEB;border-bottom:0; line-height:1em;"><h4 style="font-size:13px; border-bottom:1px solid #ADADAD; line-height:20px; padding-left:10px;">配送方式</h4></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td valign="top" style="padding:7px 9px 9px 9px;border-bottom:1px solid #EBEBEB; border-left:1px solid #EBEBEB;border-right:1px solid #EBEBEB;  ">
+                                {{var order.getShippingAddress().format('html')}}
+                            </td>
+                            <td>&nbsp;</td>
+                            <td valign="top" style="padding:7px 9px 9px 9px; border-bottom:1px solid #EBEBEB; border-left:1px solid #EBEBEB;border-right:1px solid #EBEBEB;  ">
+                                {{var order.getShippingDescription()}}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    {{/depend}}
+                    {{layout handle="sales_email_order_items" order=$order}}
+
+                    {{var items_html}}
+                    <br/>
+                    {{var order.getEmailCustomerNote()}}
+                    <p>多谢惠顾！<br/><strong>{{var order.getStoreGroupName()}}</strong></p>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+</table>
+</div>
