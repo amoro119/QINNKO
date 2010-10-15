@@ -60,17 +60,7 @@
         	<?php if ($_product->isSaleable() && $this->hasOptions()):?>
             	<?php echo $this->getChildChildHtml('container2', '', true, true) ?>
         	<?php endif;?>
-            <?php if ($this->canEmailToFriend()): ?>
-                <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
-            <?php endif; ?>
-
-            <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
-            <?php echo $this->getChildHtml('alert_urls') ?>
-
-            <?php echo $this->getTierPriceHtml() ?>
-            <?php echo $this->getChildHtml('extrahint') ?>
-
-            <?php if (!$this->hasOptions()):?>
+        	            <?php if (!$this->hasOptions()):?>
                 <div class="add-to-box">
                     <?php if($_product->isSaleable()): ?>
                         <?php echo $this->getChildHtml('addtocart') ?>
@@ -83,13 +73,22 @@
             <?php else:?>
                 <?php echo $this->getChildHtml('addto') ?>
             <?php endif; ?>
-            
-            <?php if ($_product->getShortDescription()):?>
-                <div class="short-description">
-                    <h2><?php echo $this->__('Quick Overview') ?></h2>
-                    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
-                </div>
-            <?php endif;?>
+            <?php if ($this->canEmailToFriend()): ?>
+            	    <div id="share-links">
+                            <a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>" id="tell-a-friend-link">
+                                <?php echo $this->__('Email to a Friend') ?>
+                            </a>
+                            <a href="#" id="add-bookmark-link">
+                                <img alt="Share" src="/skin/frontend/default/qinnko/images/share-off.gif" class="share-image"/>
+                            </a>
+                            <br class="clear" />
+                        </div>       
+            <?php endif; ?>
+
+            <?php echo $this->getChildHtml('alert_urls') ?>
+
+            <?php echo $this->getTierPriceHtml() ?>
+            <?php echo $this->getChildHtml('extrahint') ?> 
 
             <?php echo $this->getChildHtml('other');?>
             <?php if ($_product->isSaleable() && $this->hasOptions()):?>
@@ -118,7 +117,7 @@
     </div>
 
     <div class="product-collateral">
-        
+                <?php echo $this->getChildHtml('upsell_products') ?>
         <?php echo $this->getChildHtml('product_additional_data') ?>
     </div>
 </div>

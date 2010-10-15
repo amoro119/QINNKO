@@ -149,7 +149,7 @@ input.qty { width:2.5em !important; }
 button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
 button.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
 button.button { overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer; }
-button.button span { float:left; height:24px; background:transparent url(../images/addtoshoppingbag.jpg) 0 0 no-repeat; padding:0 0 0 6px; font:bold 11px/25px Tahoma, Verdana, Arial, sans-serif; text-transform:uppercase; text-align:center; white-space:nowrap; color:#555; width:170px;}
+button.button span { float:left; height:24px; padding:0 0 0 6px; font:bold 11px/25px Tahoma, Verdana, Arial, sans-serif; text-transform:uppercase; text-align:center; white-space:nowrap; color:#555; }
 button.button span span { background-position:100% 0; padding:0 15px 0 9px; }
 button.disabled span { color:#bbb !important; }
 
@@ -868,7 +868,7 @@ f/********** Product Prices > */
 /* Add to Cart */
 .add-to-cart label { float:left; margin-right:5px; font-weight:bold; line-height:20px; color:#555; }
 .add-to-cart .qty { float:left; margin-right:5px; }
-.add-to-cart button.button { float:left; margin:-3px 0 0; }
+.add-to-cart button.button { float:left; margin:10px 0 0; }
 .add-to-cart .paypal-logo { clear:left; margin:0; padding:10px 0 0; text-align:right; }
 
 /* Add to Links + Add to Cart */
@@ -929,20 +929,20 @@ f/********** Product Prices > */
 .product-view .product-shop .product-options-bottom .paypal-logo { float:left; }
 
 /* Product Options */
-.product-options { margin:20px 0 0; padding:0 0px 10px;  }
+.product-options { margin:5px 0 0; padding:0 0px 10px;  }
 .product-options dt { padding:10px 0 0; font-weight:normal; }
 .product-options dt label { font-weight:bold; }
 .product-options dt span.required { color:#eb340a; }
 .product-options dt .qty-holder { float:right; margin-right:15px; }
 .product-options dt .qty-holder label { vertical-align:middle; }
 .product-options dt .qty-disabled { background:none; border:0; padding:3px; color:#444; }
-.product-options dd { padding:5px 10px 15px 0; margin:0 0 5px; float:left; }
+.product-options dd { padding:5px 10px 0 0; margin:0 0 5px; float:left; }
 .product-options dl.last dd.last { border-bottom:0; padding-bottom:5px; margin-bottom:0; }
 .product-options dd input.input-text { width:98%; }
 .product-options dd input.datetime-picker { width:150px; }
 .product-options dd .time-picker { display:-moz-inline-box; display:inline-block; padding:2px 0; vertical-align:middle; }
 .product-options dd textarea { width:98%; height:8em; }
-.product-options dd select { width:99%; }
+.product-options dd select { width:100%; }
 .product-options dd .multiselect option { border-bottom:1px dotted #d9e5ee; padding:2px 4px; }
 .product-options ul.options-list { margin-right:5px; }
 .product-options ul.options-list li { padding:2px 0; }
@@ -953,7 +953,7 @@ f/********** Product Prices > */
 .product-options ul.validation-failed { padding:0 7px; }
 .product-options p.required { margin-bottom:0; padding:15px 0 0; }
 
-.product-options-bottom {  padding:15px 0px;  border-top:0; }
+.product-options-bottom {  padding:0 0px 10px;  border-top:0; }
 .product-options-bottom .tier-prices { margin:0; padding:0 0 10px; border:0; background:0; }
 .product-options-bottom .price-box { float:left; margin:0; }
 .product-options-bottom .price-label { float:left; padding-right:5px; }
@@ -1794,4 +1794,10 @@ div#tab3 .moreInfo {margin-bottom:0;}
 .yui-content p.moreInfo {position:absolute; bottom:2px;}
 .yui-content #tab3 p.moreInfo {position:absolute; bottom:11px;}
 
-#size-charts {float:left;margin-bottom:10px;padding:0 0 0 20px;}
+#size-charts {float:left;margin-bottom:10px;padding:0 0 0 30px;}
+#share-links{margin-top:16px;}
+#share-links a{text-decoration:none;}
+#share-links #tell-a-friend-link{background:url("../images/tellfriend-off.gif") 0 0 no-repeat;padding-left:30px;display:block;float:left;width:100px;}
+#share-links #tell-a-friend-link:hover{color:#999;}
+
+.add-to-cart button span{width:170px;background:transparent url(../images/addtoshoppingbag.jpg) 0 0 no-repeat;height:24px;}
