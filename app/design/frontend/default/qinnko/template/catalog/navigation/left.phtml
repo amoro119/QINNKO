@@ -30,30 +30,33 @@
  * @see Mage_Catalog_Block_Navigation
  */
 ?>
-<?php if (!Mage::registry('current_category')) return ?>
-<?php $_categories = $this->getCurrentChildCategories() ?>
-<?php $_count = is_array($_categories)?count($_categories):$_categories->count(); ?>
-<?php if($_count): ?>
+
+	
+<?
+	$_root = Mage::getModel('catalog/category'); 
+	if (!$_root->checkId(58)) {
+        return ;
+    }
+	$_categorypath = $this->getCurrentCategoryPath();
+	$_root->load(58);
+?>
 <div class="block block-layered-nav">
     <div class="block-title">
-        <strong><span><?php echo $this->__('Browse By') ?></span></strong>
+        <strong><span>产品目录</span></strong>
     </div>
     <div class="block-content">
-        <dl id="narrow-by-list2">
-            <dt><?php echo $this->__('Category') ?></dt>
-            <dd>
-                <ol>
-                <?php foreach ($_categories as $_category): ?>
-                    <?php if($_category->getIsActive()): ?>
-                    <li>
-                        <a href="<?php echo $this->getCategoryUrl($_category) ?>"<?php if ($this->isCategoryActive($_category)): ?> class="current"<?php endif; ?>><?php echo $this->htmlEscape($_category->getName()) ?></a> (<?php echo $_category->getProductCount() ?>)
-                    </li>
-                    <?php endif; ?>
-                <?php endforeach ?>
-                </ol>
-            </dd>
-        </dl>
+    	<h1 class="titlecurrent">女士</h1>
+    	<div id="basic-accordian">
+			<?php foreach ($_root->getChildrenCategories() as $_category) : ?>
+    		<div id="test<?php echo $_category->getId()?>-header" class="accordion_headings<?php if (in_array($_category->getId(), $_categorypath)){echo " header_highlight";} ?>"><?php echo $_category->getName()?></div>
+    			<div id="test<?php echo $_category->getId()?>-content">
+					<?php foreach ($_category->getChildrenCategories() as $_subCategory): ?>
+    					<a href="<?php echo $this->getCategoryUrl($_subCategory)?>"><?php echo $_subCategory->getName() ?></a>
+					<?php endforeach ?>
+    			</div>
+			<?php endforeach ?>
+    	</div>
+    	<h1 class="title"><a href="#">男士</a></h1>
         <script type="text/javascript">decorateDataList('narrow-by-list2')</script>
     </div>
 </div>
-<?php endif; ?>

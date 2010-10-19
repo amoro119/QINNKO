@@ -26,7 +26,7 @@
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
 
-body          { background:#fff; font:12px/1.55 arial, helvetica, sans-serif; color:#444; text-align:center; }
+body          { background:#fff; font:12px/1.55 arial, helvetica, sans-serif; color:#000; text-align:center; }
 
 img           { border:0; vertical-align:top; }
 
@@ -96,10 +96,10 @@ ul,ol         { list-style:none; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
 .main-container {}
-.main { background:#fff; padding:16px 16px 50px; min-height:350px; }
+.main { background:#fff; padding:16px 16px 0px; min-height:350px;overflow:hidden; }
 
 /* Base Columns */
-.col-left { float:left; width:242px; padding:0 0 1px;background:#2b1413;height:492px; }
+.col-left { float:left; width:242px; background:#2b1413;margin-bottom:-9999px;padding:0 0 9999px; }
 .col-main { float:left; width:686px; padding:0 0 1px; }
 .col-right { float:right; width:220px; padding:0 0 1px; }
 
@@ -474,7 +474,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header .links a { padding:0 7px 0 0; background:url(../images/bkg_pipe1.gif) no-repeat 100% 50%; }
 .header .links li.last a { padding:0; background:none; }
 
-.top-bar { padding:10px 12px 10px 12px; border:1px solid #bbb; border-bottom-color:#dedede; background:#000; line-height:21px;color:#fff;font-size:14px; }
+.top-bar { padding:10px 12px 10px 12px; background:#000; line-height:21px;color:#fff;font-size:14px; }
 .top-bar .breadcrumbs { float:left; width:580px; overflow:hidden; }
 .form-search { float:right;padding-top:3px; }
 .form-search label { float:left; font-size:12px; font-weight:bold; padding:0 5px 0 0; }
@@ -702,14 +702,14 @@ tr.summary-details-excluded { font-style:italic; }
 .products-grid .product-image { display:block; width:170px; height:170px; margin:0 0 10px; }
 .products-grid.first .product-image { border-top:0; }
 .products-grid li.last .product-image { border-right:0; }
-.products-grid .product-name { font-size:12px; margin:0 0 6px; }
-.products-grid .product-name a { color:#444; text-decoration:underline; }
+.products-grid .product-name { font-size:12px; margin:0 0 6px;padding-left:30px; }
+.products-grid .product-name a { text-decoration:none; }
 .products-grid .product-name a:hover { text-decoration:none; }
-.products-grid .price-box { margin:5px 0; }
+.products-grid .price-box { margin:5px 0;padding-left:30px; }
 .products-grid .availability { line-height:21px; }
 .products-grid .actions { position:absolute; bottom:20px; }
 .col2-left-layout .products-grid,
-.col2-right-layout .products-grid { width:684px; margin:0 auto; }
+.col2-right-layout .products-grid { width:684px; margin:20px auto; }
 .col1-layout .products-grid,
 .page-empty .products-grid { width:684px; margin:0 auto; }
 
@@ -886,7 +886,7 @@ f/********** Product Prices > */
 .product-essential h2 { font:bold 12px/1.25 Arial, Helvetica, sans-serif; }
 
 .product-collateral {}
-.product-collateral h2 { font-size:19px; font-weight:normal; line-height:1.15; }
+.product-collateral h2 { background:none repeat scroll 0 0 #000000;color:#FFFFFF;font-size:14px;font-weight:normal;padding:10px 20px; }
 .product-collateral .box-collateral {}
 
 /* Product Images */
@@ -1536,7 +1536,7 @@ f/********** Product Prices > */
 
 
 /* Footer ================================================================================ */
-.footer-container {}
+.footer-container {padding-top:25px;}
 .footer { margin:15px 0 40px; }
 .footer a { color:#444; }
 
@@ -1677,24 +1677,13 @@ z-index:2;
 #test-content #test1-content #test2-content{
 
 }
-#test-content a{
+#basic-accordian a{
 	float:left;
 	width:100%;
 	color:#fff;
 	padding-left:20px;
 }
-#test1-content a{
-	float:left;
-	width:100%;
-	color:#fff;
-	padding-left:20px;
-}
-#test2-content a{
-	float:left;
-	width:100%;
-	color:#fff;
-	padding-left:20px;
-}
+
 .block-content .titlecurrent{
 	display:block;
 	position:absolute;
@@ -1801,3 +1790,5 @@ div#tab3 .moreInfo {margin-bottom:0;}
 #share-links #tell-a-friend-link:hover{color:#999;}
 
 .add-to-cart button span{width:170px;background:transparent url(../images/addtoshoppingbag.jpg) 0 0 no-repeat;height:24px;}
+
+.products-grid li.item h1{padding-left:30px;font-weight:bold;font-size:14px;}
