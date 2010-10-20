@@ -96,7 +96,7 @@ ul,ol         { list-style:none; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
 .main-container {}
-.main { background:#fff; padding:16px 16px 0px; min-height:350px;overflow:hidden; }
+.main { background:#fff; padding:16px 20px 0 12px; min-height:350px;overflow:hidden; }
 
 /* Base Columns */
 .col-left { float:left; width:242px; background:#2b1413;margin-bottom:-9999px;padding:0 0 9999px; }
@@ -104,7 +104,7 @@ ul,ol         { list-style:none; }
 .col-right { float:right; width:220px; padding:0 0 1px; }
 
 /* 1 Column Layout */
-.col1-layout .main { padding:16px 30px 40px; }
+.col1-layout .main { padding:16px 0px 40px 10px; }
 .col1-layout .col-main { float:none; width:auto; }
 
 /* 2 Columns Layout */
@@ -1264,7 +1264,7 @@ f/********** Product Prices > */
 .block-progress .block-title { background:none; border:0; padding:0; margin:0 0 5px; }
 .block-progress .block-title strong { font-size:12px; }
 .block-progress .block-content { background:none; padding:0; }
-.block-progress dt { font-size:10px; line-height:1.35; background:#eee; border:1px solid #ddd; margin:0 0 6px; padding:2px 8px; color:#555; text-transform:uppercase; }
+.block-progress dt { font-size:12px; line-height:1.35; background:#eee; border:1px solid #ddd; margin:0 0 6px; padding:2px 8px; color:#555; text-transform:uppercase; }
 .block-progress dd { border-top:0; padding:2px 10px; margin:0 0 6px; }
 .block-progress dt.complete {}
 .block-progress dt.complete a { text-transform:none; }
@@ -1536,7 +1536,7 @@ f/********** Product Prices > */
 
 
 /* Footer ================================================================================ */
-.footer-container {padding-top:25px;}
+.footer-container {padding-top:25px;padding-left:10px;}
 .footer { margin:15px 0 40px; }
 .footer a { color:#444; }
 
@@ -1681,7 +1681,8 @@ z-index:2;
 	float:left;
 	width:100%;
 	color:#fff;
-	padding-left:20px;
+	padding-left:6px;
+	line-height:25px;
 }
 
 .block-content .titlecurrent{

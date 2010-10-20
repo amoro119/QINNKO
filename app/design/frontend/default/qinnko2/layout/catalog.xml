@@ -64,6 +64,13 @@ Category default layout
         <reference name="root">
             <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
         </reference>
+        <reference name="head"> 
+    <action method="addItem"><type>skin_js</type><name>js/accordian.pack.js</name></action>
+    <!--添加 js  myjs.js 文件在 /skin/frontend/主题包文件夹/主题文件夹/js-->
+</reference>
+<reference name="left">
+            <block type="catalog/navigation" name="catalog.leftnav" after="currency" template="catalog/navigation/left.phtml"/>
+</reference>
         <reference name="content">
             <block type="catalog/category_view" name="category.products" template="catalog/category/view.phtml">
                 <block type="catalog/product_list" name="product_list" template="catalog/product/list.phtml">
@@ -194,12 +201,7 @@ Product view
                 </block>
 
                 <action method="setTierPriceTemplate"><template>catalog/product/view/tierprices.phtml</template></action>
-                
-                <block type="catalog/product_list_upsell" name="product.info.upsell" as="upsell_products" template="catalog/product/list/upsell.phtml">
-                    <action method="setColumnCount"><columns>6</columns></action>
-                    <action method="setItemLimit"><type>upsell</type><limit>6</limit></action>
-                </block>
-                
+
                 <block type="catalog/product_view_tabs" name="product.info.tabs" as="info_tabs" template="catalog/product/view/tabs.phtml" >
                     <action method="addTab" translate="title" module="catalog"><alias>description</alias><title>Product Description</title><block>catalog/product_view_description</block><template>catalog/product/view/description.phtml</template></action>
                 </block>
@@ -241,10 +243,17 @@ Product view
                     <action method="append"><block>product.info.options.wrapper</block></action>
                     <action method="append"><block>product.info.options.wrapper.bottom</block></action>
                 </block>
-                <block type="reports/product_viewed" before="right.permanent.callout" name="left.reports.product.viewed" template="reports/product_viewed.phtml" />
+                <block type="catalog/product_list_upsell" name="product.info.upsell" as="upsell_products" template="catalog/product/list/upsell.phtml">
+                    <action method="setColumnCount"><columns>4</columns></action>
+                    <action method="setItemLimit"><type>upsell</type><limit>4</limit></action>
+                </block>
                 <action method="unsetCallChild"><child>container1</child><call>ifEquals</call><if>0</if><key>alias_in_layout</key><key>options_container</key></action>
                 <action method="unsetCallChild"><child>container2</child><call>ifEquals</call><if>0</if><key>alias_in_layout</key><key>options_container</key></action>
             </block>
+        </reference>
+        <reference name="upsell_products">
+            <action method="setColumnCount"><columns>5</columns></action>
+            <action method="setItemLimit"><type>upsell</type><limit>5</limit></action>
         </reference>
         <reference name="left">
             <block type="catalog/product_list_related" name="catalog.product.related" before="-" template="catalog/product/list/related.phtml"/>
