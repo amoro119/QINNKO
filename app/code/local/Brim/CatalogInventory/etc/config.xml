@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Brim_CatalogInventory>
+			<version>0.1.0</version>
+		</Brim_CatalogInventory>
+	</modules>
+	<global>
+		<models>
+			<cataloginventory_mysql4>
+				<rewrite>
+					<indexer_stock_grouped>Brim_CatalogInventory_Model_Mysql4_Indexer_Stock_Grouped</indexer_stock_grouped>
+				</rewrite>
+			</cataloginventory_mysql4>
+		</models>
+	</global>
+</config>

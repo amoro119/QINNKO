@@ -1,0 +1,12 @@
+<config>
+    <modules>
+		<Brim_Catalog>
+				<active>true</active>
+				<codePool>local</codePool>
+		</Brim_Catalog>
+		<Brim_CatalogInventory>
+				<active>true</active>
+				<codePool>local</codePool>
+		</Brim_CatalogInventory>
+	</modules>
+</config>

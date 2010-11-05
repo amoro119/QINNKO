@@ -179,10 +179,11 @@ Product view
         </reference>
         <reference name="head">
             <action method="addJs"><script>varien/product.js</script></action>
-
+			<action method="addJs"><script>scriptaculous/scriptaculous.js</script></action>
             <action method="addItem"><type>js_css</type><name>calendar/calendar-win2k-1.css</name><params/><!--<if/><condition>can_load_calendar_js</condition>--></action>
             <action method="addItem"><type>js</type><name>calendar/calendar.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>
             <action method="addItem"><type>js</type><name>calendar/calendar-setup.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>
+            <action method="addItem"><type>skin_js</type><name>js/jquery.jcarousel.min.js</name></action>
         </reference>
         <reference name="content">
         	<block type="page/html_wrapper" name="top.bar" as="topBar" translate="label">
@@ -244,8 +245,11 @@ Product view
                     <action method="append"><block>product.info.options.wrapper.bottom</block></action>
                 </block>
                 <block type="catalog/product_list_upsell" name="product.info.upsell" as="upsell_products" template="catalog/product/list/upsell.phtml">
-                    <action method="setColumnCount"><columns>4</columns></action>
-                    <action method="setItemLimit"><type>upsell</type><limit>4</limit></action>
+                    <action method="setColumnCount"><columns>20</columns></action>
+                    <action method="setItemLimit"><type>upsell</type><limit>20</limit></action>
+                </block>
+                <block type="reports/product_viewed" name="right.reports.product.viewed" as="product_viewed" template="reports/product_viewed.phtml" >
+                 <action method="setColumnCount"><columns>7</columns></action>
                 </block>
                 <action method="unsetCallChild"><child>container1</child><call>ifEquals</call><if>0</if><key>alias_in_layout</key><key>options_container</key></action>
                 <action method="unsetCallChild"><child>container2</child><call>ifEquals</call><if>0</if><key>alias_in_layout</key><key>options_container</key></action>

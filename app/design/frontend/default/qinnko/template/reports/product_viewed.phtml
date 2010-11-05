@@ -25,20 +25,28 @@
  */
 /* @var $this Mage_Reports_Block_Product_Viewed */
 ?>
+<?php
+/**
+ * @see Mage_Reports_Block_Product_Viewed
+ */
+?>
 <?php if ($_products = $this->getRecentlyViewedProducts()): ?>
-<div class="block block-viewed">
-    <div class="block-title">
-        <strong><span><?php echo $this->__('Recently Viewed Products') ?></span></strong>
-    </div>
-    <div class="block-content">
-        <ol id="recently-viewed-items">
-        <?php foreach ($_products as $_item): ?>
-            <li class="item">
-                <p class="product-name"><a href="<?php echo $this->getProductUrl($_item) ?>"><?php echo $this->helper('catalog/output')->productAttribute($_item, $_item->getName() , 'name') ?></a></p>
+<div class="recentviewed">
+<h2 class="subtitle"><?php echo $this->__('Your Recently Viewed') ?></h2>
+<?php $_columnCount = $this->getColumnCount(); ?>
+    <?php $i=0; foreach ($_products as $_product): ?>
+        <?php if ($i++%$_columnCount==0): ?>
+        <ul class="products-grid" id="recent">
+        <?php endif ?>
+            <li class="item<?php if(($i-1)%$_columnCount==0): ?> first<?php elseif($i%$_columnCount==0): ?> last<?php endif; ?>">
+                <a href="<?php echo $this->getProductUrl($_product) ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(125) ?>" width="125" height="125" alt="<?php echo $this->stripTags($_product->getName(), null, true) ?>" /></a>
+                <h3 class="product-name"><a href="<?php echo $this->getProductUrl($_product) ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getName() , 'name') ?></a></h3>
+                <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+                <?php echo $this->getPriceHtml($_product, true, '-home-viewed') ?>
             </li>
-        <?php endforeach; ?>
-        </ol>
-        <script type="text/javascript">decorateList('recently-viewed-items');</script>
+        <?php if ($i%$_columnCount==0 || $i==count($_products)): ?>
+        </ul>
+        <?php endif; ?>
+    <?php endforeach; ?>
     </div>
-</div>
 <?php endif; ?>

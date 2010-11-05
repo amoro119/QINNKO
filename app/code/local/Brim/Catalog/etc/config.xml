@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Brim_Catalog>
+			<version>0.1.0</version>
+		</Brim_Catalog>
+	</modules>
+	<global>
+		<blocks>
+            <adminhtml>
+                <rewrite>
+					<catalog_product_edit_tab_super_group>Brim_Catalog_Block_Adminhtml_Product_Edit_Tab_Super_Group</catalog_product_edit_tab_super_group>
+                </rewrite>
+            </adminhtml>            
+        </blocks>
+		<models>
+			<catalog>
+				<rewrite>
+					<product_type_grouped>Brim_Catalog_Model_Product_Type_Grouped</product_type_grouped>
+				</rewrite>
+			</catalog>
+		</models>
+	</global>
+</config>

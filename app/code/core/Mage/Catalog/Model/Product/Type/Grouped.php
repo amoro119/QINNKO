@@ -282,7 +282,6 @@ class Mage_Catalog_Model_Product_Type_Grouped extends Mage_Catalog_Model_Product
                             if (is_string($_result) && !is_array($_result)) {
                                 return $_result;
                             }
-
                             if (!isset($_result[0])) {
                                 return Mage::helper('checkout')->__('Cannot add the item to shopping cart.');
                             }
