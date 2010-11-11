@@ -1925,3 +1925,21 @@ div#tab3 .moreInfo {margin-bottom:0;}
 .recentviewed{
 	margin-top:20px;
 }
+
+.custom-option-link{
+	color:red;
+	font-size:10px;
+}
+
+.custom-option-panel{
+	position:absolute;
+	width:200px;
+	min-height:200px;
+	left:-220px;
+	background-color:#fff;
+	border:1px solid;
+	top:0;
+}
+.custom-option-wrapper{
+	position:relative;
+}
