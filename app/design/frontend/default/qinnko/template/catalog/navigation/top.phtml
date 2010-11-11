@@ -25,6 +25,10 @@
  */
 ?>
 <?php
+    $_base_url = $this->helper('core/url')->getHomeUrl();
+    $class = str_replace($_base_url, '', $this->helper('core/url')->getCurrentUrl());
+?>
+<?php
 /**
  * Top menu for store
  *
@@ -43,8 +47,9 @@
 <?php if($_menu): ?>
 <div class="nav-container">
     <ul id="nav">
+    	<li class="<?php if($_base_url == "?___store=chinese&___from_store=english") echo "active"; ?>"><a href="<?php echo $this->getBaseUrl() ?>">Home</a></li>
         <?php echo $_menu ?>
-        <li><a href="#">QINNKO设计师</a></li>
+        <li><a href="#">QINNKO定制</a></li>
         <li><a href="#">QINNKO的世界</a></li>
     </ul>
 </div>

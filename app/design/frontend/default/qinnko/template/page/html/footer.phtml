@@ -27,15 +27,8 @@
 <div class="footer-container">
     <div class="footer">
         <?php echo $this->getChildHtml('bottomContainer') ?>
-        <div class="f-right">
-            <img src="<?php echo $this->getSkinUrl('images/media/footer_callout.png');?>" class="footer-callout" alt="" />
-            <?php echo $this->getChildHtml('store_switcher') ?>
-        </div>
-        <div class="f-left">
             <?php echo $this->getChildHtml('cms_footer_links') ?>
             <?php echo $this->getChildHtml('footer_links') ?>
-            <?php echo $this->getChildHtml('newsletter') ?>
             <address><?php echo $this->getCopyright() ?></address>
-        </div>
     </div>
 </div>

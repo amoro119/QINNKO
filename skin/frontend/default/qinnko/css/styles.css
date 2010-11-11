@@ -492,7 +492,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /********** < Navigation */
 .nav-container {}
-#nav { float:left;  font-size:14px;margin:0 0 0 5px }
+#nav { float:left;  font-size:16px;margin:0 0 0 5px;}
 
 /* All Levels */ /* Style consistent throughout all nav levels */
 #nav li { position:relative;text-transform:uppercase; text-align:left;	}
@@ -503,7 +503,7 @@ tr.summary-details-excluded { font-style:italic; }
 #nav li ul span {white-space:normal; }
 
 /* 0 Level */
-#nav li { float:left; margin:1px 8px 11px 1px; padding:3px 8px; }
+#nav li { float:left; margin:1px 8px 11px 1px; padding:3px 30px 3px 3px; }
 #nav li.active a { color:#000;font-weight:bold; }
 #nav a { float:left; padding-right:11px; color:#929292; font-weight:normal; }
 #nav li.over a,
@@ -1539,7 +1539,7 @@ f/********** Product Prices > */
 
 /* Footer ================================================================================ */
 .footer-container {padding-top:25px;padding-left:10px;}
-.footer { margin:15px 0 40px; }
+.footer { margin:15px 0 40px;text-align:center; }
 .footer a { color:#444; }
 
 .footer .f-left { width:520px; }
@@ -1550,10 +1550,10 @@ f/********** Product Prices > */
 .footer .links li.last { background:none !important; padding-right:0 !important; }
 .footer .bugs { margin:0; color:#666; }
 .footer .bugs a { font-weight:bold; color:#444; }
-.footer address { color:#666; }
+.footer address { color:#666;margin-top:8px; }
 .footer address a { color:#444; }
 
-.footer .form-subscribe { margin:8px 0; }
+.footer .form-subscribe { margin:0px 0; }
 .footer .form-subscribe label,
 .footer .form-subscribe .input-box,
 .footer .form-subscribe button.button { float:left; }

@@ -1,3 +1,4 @@
 var/*/
+!var/backups/
 app/etc/config.xml
 media/*
