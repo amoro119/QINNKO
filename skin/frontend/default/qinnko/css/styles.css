@@ -1933,13 +1933,27 @@ div#tab3 .moreInfo {margin-bottom:0;}
 
 .custom-option-panel{
 	position:absolute;
-	width:200px;
+	width:300px;
 	min-height:200px;
-	left:-220px;
+	left:-320px;
 	background-color:#fff;
 	border:1px solid;
 	top:0;
+	_height:200px;
 }
 .custom-option-wrapper{
 	position:relative;
+}
+.warnning-required-options{
+	color:red;
+	font-size:12px;
+	line-height:20px;
+	display:none;
+}
+.warnning-required-options:before{
+	content:"*";
+	color:red;
+}
+.red{
+	color:red;
 }
