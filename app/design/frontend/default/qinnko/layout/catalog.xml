@@ -64,6 +64,13 @@ Category default layout
         <reference name="root">
             <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
         </reference>
+		<reference name="head">
+			<action method="addItem"><type>skin_js</type><name>js/accordian.pack.js</name></action>
+			    <!--添加 js  myjs.js 文件在 /skin/frontend/主题包文件夹/主题文件夹/js-->
+			</reference>
+		<reference name="left">
+		            <block type="catalog/navigation" name="catalog.leftnav" after="currency" template="catalog/navigation/left.phtml"/>
+		</reference>
         <reference name="content">
             <block type="catalog/category_view" name="category.products" template="catalog/category/view.phtml">
                 <block type="catalog/product_list" name="product_list" template="catalog/product/list.phtml">

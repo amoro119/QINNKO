@@ -54,9 +54,9 @@
         <?php endif; ?>
     
         <div class="sort-by">
-            <span>按照价格排序：</span>
-                <a href="<?php echo $this->getOrderUrl(null, 'desc') ?>" title="<?php echo $this->__('Set Descending Direction') ?>">High</a>            
-                <a href="<?php echo $this->getOrderUrl(null, 'asc') ?>" title="<?php echo $this->__('Set Ascending Direction') ?>" style="padding-right:10px;">Low</a>|
+            <span><?php echo $this->__('Sort by price') ?>:</span>
+                <a href="<?php echo $this->getOrderUrl(null, 'desc') ?>" title="<?php echo $this->__('Set Descending Direction') ?>"><?php echo $this->__('high') ?></a>            
+                <a href="<?php echo $this->getOrderUrl(null, 'asc') ?>" title="<?php echo $this->__('Set Ascending Direction') ?>" style="padding-right:10px;"><?php echo $this->__('low') ?></a>|
                             <label><?php echo $this->__('Show') ?></label>
             <select onchange="setLocation(this.value)">
             <?php foreach ($this->getAvailableLimit() as  $_key=>$_limit): ?>

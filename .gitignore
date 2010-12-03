@@ -1,4 +1,5 @@
-var/*/
-!var/backups/
-app/etc/config.xml
-media/*
+/var/*/
+!/var/backups/
+/app/etc/config.xml
+/Media/*
+/media/*
