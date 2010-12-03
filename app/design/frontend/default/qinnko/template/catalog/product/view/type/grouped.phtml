@@ -55,46 +55,103 @@
     </thead>
 <script type="text/javascript" charset="utf-8">
 	jQuery(function($){
+		productAddToCartForm=jQuery('#product_addtocart_form');
+		checkOptions();
 		jQuery('.custom-option-panel').hide();
-		jQuery('.custom-option-link').click(function(event){
+		jQuery('.row-width-options').css('cursor','pointer');
+		jQuery('.custom-option-panel').css('cursor','auto');
+		jQuery('.custom-option-panel').click(function(event){
+			event.stopPropagation();
+		});
+		jQuery('.input-text').click(function(event){
+			event.stopPropagation();
+		});
+		jQuery('.row-width-options').click(function(event){
 			event.preventDefault();
-			var panel= this.next();
+			event.preventDefault();
+			var panel = jQuery(this).find(".custom-option-panel");
+			var node  = jQuery(this).find(".custom-option-link");
 			jQuery('.custom-option-panel').not(panel).hide();
+			jQuery('.custom-option-link').not(node).text('+');
 			panel.toggle();
+			node.text(node.text()=="+" ? "-":"+");
 		});	
+		jQuery('#product_addtocart_form').change(function(){
+			checkOptions();
+		});
+		jQuery('#product_addtocart_form').submit(function(e){
+			if(!checkOptions()){
+				alert('<?php echo $this->__('Please specify the product required option(s).') ?>');
+				e.preventDefault();
+				return false;
+			}
+		});
 	});
+	function checkOptions(){
+		var passed=true;
+		jQuery('.row-width-options').each(function(i){
+			var unselected=false;
+			jQuery(this).find('select.required').each(function(i){
+				if(!jQuery(this).val()||jQuery(this).val()==""){
+					passed=false;
+					unselected=true;
+					}
+			});
+			if(unselected){
+				jQuery(this).find('.warnning-required-options').show();
+			}
+			else{
+				jQuery(this).find('.warnning-required-options').hide();
+			}
 
+		});
+		return passed;
+	}
 </script>
     <tbody>
     <?php if (count($_associatedProducts)): ?>
     <?php foreach ($_associatedProducts as $_item): ?>
         <?php $_finalPriceInclTax = $this->helper('tax')->getPrice($_item, $_item->getFinalPrice(), true) ?>
-        <tr>
-			<td>
-			<?php
+		<?php
 			$options = $_item->getProductOptionsCollection();
-			if($options && $options->getSize()>0)
-			{
-				$link = $_item->getProductUrl();
-				echo "<div class='custom-option-wrapper'><a class='custom-option-link' href='".$link."'>*</a>";
-				echo "<div class='custom-option-panel'>";
-				foreach($options as $option){
-					$select = $this->getLayout()->createBlock('core/html_select');
-					$select->setClass('product-custom-option');
-					$select->setName('super_options['.$_item->getId().']['.$option->getId().']');
-					$select->addOption('', '– Select '.$option->getTitle().' –');
-
-					foreach ($option->getValues() as $value) {
-						$select->addOption($value->getOptionTypeId(), $value->getTitle());
-					}
-
-					echo $select->getHtml();
-				}
-				echo "</div></div>";
-			}
-			?>
+			$hasOptions = $options && $options->getSize()>0;
+		?>
+        <tr <?php if($hasOptions) echo "class='row-width-options'"; ?>>
+			<td>
+				<?php if ($hasOptions): ?>
+					<div class='custom-option-wrapper'>
+						<span class='custom-option-link'>+</span>
+						<div class='custom-option-panel'>
+						<?php
+							foreach($options as $option){
+								echo "<label for=".'super-options-'.$_item->getId()." >".$option->getTitle()."</label>";
+								$select = $this->getLayout()->createBlock('core/html_select');
+								if($option->getIsRequire())
+									$select->setClass('product-custom-option required');
+								else
+									$select->setClass('product-custom-option');
+								$select->setId('super-options-'.$_item->getId());
+								$select->setName('super_options['.$_item->getId().']['.$option->getId().']');
+								$select->addOption('', '–- '.$option->getTitle().' -–');
+								foreach ($option->getValues() as $value) {
+									$select->addOption($value->getOptionTypeId(), $value->getTitle());
+								}
+								echo $select->getHtml();
+								if($option->getIsRequire())
+								{echo "<span class='red'>*</span>";}
+								echo "<br/>";
+							}
+						?>
+						</div>
+					</div>
+				<?php endif ?>
 			</td>
-            <td><?php echo $this->htmlEscape($_item->getName()) ?></td>
+            <td>
+				<?php echo $this->htmlEscape($_item->getName()) ?>
+				<?php if ($hasOptions): ?>
+					<div class="warnning-required-options"><?php echo $this->__("Product has required options") ?></div>
+				<?php endif ?>
+			</td>
             <td class="a-right">
                 <?php echo $this->getPriceHtml($_item, true) ?>
                 <?php echo $this->getTierPriceHtml($_item) ?>
