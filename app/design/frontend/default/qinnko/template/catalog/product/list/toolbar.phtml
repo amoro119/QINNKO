@@ -34,7 +34,18 @@
 <?php if($this->getCollection()->getSize()): ?>
 <div class="toolbar">
     <div class="pager">
-    	    <?php echo $this->getPagerHtml() ?>
+	<?php
+		#强制8个每页,后台需要设为8个每页
+		$pageNum=ceil($this->getTotalNum()/8);
+	?>
+    	    <div class="pages">
+    	    	<select name="page_selector" onchange="setLocation(this.value)">
+    	    		<option value="<?php echo $this->getPagerUrl(array($this->getLimitVarName() => 'all',$this->getPageVarName() => null)); ?>" <?php if($this->isLimitCurrent('all')): ?> selected="selected"<?php endif ?>><?php echo $this->__('All') ?></option>
+					<?php for($i=1;$i<=$pageNum;$i++): ?>
+					<option value="<?php echo $this->getPagerUrl(array($this->getLimitVarName() => 8,$this->getPageVarName() => $i)); ?>" <?php if(!$this->isLimitCurrent('all') && $this->getCollection()->getCurPage()==$i): ?> selected="selected"<?php endif ?>><?php echo $this->__('Page %s',$i) ?></option>	
+					<?php endfor ?>
+    	    	</select>
+    	    </div>
     <?php if( $this->isExpanded() ): ?>
     <div class="limiter">
         <?php if( $this->isEnabledViewSwitcher() ): ?>
@@ -57,14 +68,8 @@
             <span><?php echo $this->__('Sort by price') ?>:</span>
                 <a href="<?php echo $this->getOrderUrl(null, 'desc') ?>" title="<?php echo $this->__('Set Descending Direction') ?>"><?php echo $this->__('high') ?></a>            
                 <a href="<?php echo $this->getOrderUrl(null, 'asc') ?>" title="<?php echo $this->__('Set Ascending Direction') ?>" style="padding-right:10px;"><?php echo $this->__('low') ?></a>|
-                            <label><?php echo $this->__('Show') ?></label>
-            <select onchange="setLocation(this.value)">
-            <?php foreach ($this->getAvailableLimit() as  $_key=>$_limit): ?>
-                <option value="<?php echo $this->getLimitUrl($_key) ?>"<?php if($this->isLimitCurrent($_key)): ?> selected="selected"<?php endif ?>>
-                    <?php echo $_limit ?>
-                </option>
-            <?php endforeach; ?>
-        </select> <span style="padding-right:10px;"><?php echo $this->__('per page') ?></span>|
+
+            <a href="<?php echo $this->getPagerUrl(array($this->getLimitVarName() => 'all',$this->getPageVarName() => null)); ?>"><?php echo $this->__('view all') ?></a> |
         </div>
     </div>
     <?php endif; ?>
