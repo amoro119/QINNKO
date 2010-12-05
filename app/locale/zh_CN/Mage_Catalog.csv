@@ -71,6 +71,7 @@
 "Attrribute names can be specified per store.","同一属性可为每一个商店指定不同的名称。"
 "Autogenerate","自动生成"
 "Availability","库存"
+"Availability:","库存:"
 "Availability: In stock.","库存：有货"
 "Availability: Out of stock.","库存：缺货。"
 "Back","返回"
@@ -668,3 +669,4 @@
 "x","x"
 "view all","显示所有"
 "Page %s","第%s页"
+"View Product","查看产品"

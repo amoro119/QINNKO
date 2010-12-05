@@ -1933,17 +1933,33 @@ div#tab3 .moreInfo {margin-bottom:0;}
 	font-size:10px;
 }
 
-.custom-option-panel{
+.detail-panel{
 	position:absolute;
-	width:300px;
-	min-height:200px;
-	left:-320px;
-	background-color:#fff;
-	border:1px solid;
+	width: 220px;
+	min-height:150px;
+	left:-220px;
 	top:0;
-	_height:200px;
+	background:transparent url('../images/bubble_bottom.gif') no-repeat bottom left;
+/*	for ie 6*/
+	_height:150px;
 }
-.custom-option-wrapper{
+.detail-panel-content{
+	padding: 10px 32px 10px 14px;	
+	width: 174px;
+	background:transparent url('../images/bubble_top.gif') no-repeat top left;
+}
+.detail-panel-content select{
+	width:160px;
+/*	text-align:center;*/
+}
+.detail-panel-content div{
+	margin-bottom:10px;
+}
+.detail-panel-content p{
+	color:#999;
+}
+
+.detail-panel-wrapper{
 	position:relative;
 }
 .warnning-required-options{

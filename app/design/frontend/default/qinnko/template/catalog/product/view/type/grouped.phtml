@@ -40,9 +40,6 @@
 <?php endif; ?>
 <?php echo $this->getChildHtml('product_type_data_extra') ?>
 <table class="data-table grouped-items-table" id="super-product-table">
-    <col />
-    <col />
-    <col width="1" />
     <thead>
         <tr>
 			<th></th>
@@ -57,24 +54,24 @@
 	jQuery(function($){
 		productAddToCartForm=jQuery('#product_addtocart_form');
 		checkOptions();
-		jQuery('.custom-option-panel').hide();
-		jQuery('.row-width-options').css('cursor','pointer');
-		jQuery('.custom-option-panel').css('cursor','auto');
-		jQuery('.custom-option-panel').click(function(event){
+		jQuery('.detail-panel').hide();
+		jQuery('#super-product-table tr').css('cursor','pointer');
+		jQuery('.detail-panel').css('cursor','auto');
+		jQuery('.detail-panel').click(function(event){
 			event.stopPropagation();
 		});
 		jQuery('.input-text').click(function(event){
 			event.stopPropagation();
 		});
-		jQuery('.row-width-options').click(function(event){
+		jQuery('#super-product-table tr').click(function(event){
 			event.preventDefault();
 			event.preventDefault();
-			var panel = jQuery(this).find(".custom-option-panel");
+			var panel = jQuery(this).find(".detail-panel");
 			var node  = jQuery(this).find(".custom-option-link");
-			jQuery('.custom-option-panel').not(panel).hide();
+			jQuery('.detail-panel').not(panel).hide();
 			jQuery('.custom-option-link').not(node).text('+');
-			panel.toggle();
-			node.text(node.text()=="+" ? "-":"+");
+			panel.fadeToggle();
+			//node.text(node.text()=="+" ? "-":"+");
 		});	
 		jQuery('#product_addtocart_form').change(function(){
 			checkOptions();
@@ -118,33 +115,48 @@
 		?>
         <tr <?php if($hasOptions) echo "class='row-width-options'"; ?>>
 			<td>
-				<?php if ($hasOptions): ?>
-					<div class='custom-option-wrapper'>
-						<span class='custom-option-link'>+</span>
-						<div class='custom-option-panel'>
-						<?php
-							foreach($options as $option){
-								echo "<label for=".'super-options-'.$_item->getId()." >".$option->getTitle()."</label>";
-								$select = $this->getLayout()->createBlock('core/html_select');
-								if($option->getIsRequire())
-									$select->setClass('product-custom-option required');
-								else
-									$select->setClass('product-custom-option');
-								$select->setId('super-options-'.$_item->getId());
-								$select->setName('super_options['.$_item->getId().']['.$option->getId().']');
-								$select->addOption('', '–- '.$option->getTitle().' -–');
-								foreach ($option->getValues() as $value) {
-									$select->addOption($value->getOptionTypeId(), $value->getTitle());
-								}
-								echo $select->getHtml();
-								if($option->getIsRequire())
-								{echo "<span class='red'>*</span>";}
-								echo "<br/>";
-							}
-						?>
+				<div class='detail-panel-wrapper'>
+					<div class='detail-panel'>
+						<div class='detail-panel-content'>
+							<?php if ($hasOptions): ?>
+							<div class="options">
+								<h2><?php echo $this->__('Custom Options') ?>:</h2>
+								<?php
+									foreach($options as $option){
+										//echo "<label for=".'super-options-'.$_item->getId()." >".$option->getTitle()."</label>";
+										$select = $this->getLayout()->createBlock('core/html_select');
+										if($option->getIsRequire())
+											$select->setClass('product-custom-option required');
+										else
+											$select->setClass('product-custom-option');
+										$select->setId('super-options-'.$_item->getId());
+										$select->setName('super_options['.$_item->getId().']['.$option->getId().']');
+										$select->addOption('', '–- '.$option->getTitle().' -–');
+										foreach ($option->getValues() as $value) {
+											$select->addOption($value->getOptionTypeId(), $value->getTitle());
+										}
+										echo $select->getHtml();
+										if($option->getIsRequire())
+										{echo "<span class='red'>*</span>";}
+										echo "<br/>";
+									}
+								?>
+							</div>
+							<?php endif ?>
+							<div class="description">
+								<h2><?php echo $this->__('Product Description') ?>:</h2>
+								<p><?php echo $this->helper('catalog/output')->productAttribute($_item, $_item->getDescription(), 'description') ?></p>
+							</div>
+							<div>
+								<h2><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->__('View Product') ?></a></h2>
+							</div>
 						</div>
 					</div>
-				<?php endif ?>
+				</div>
+				<?php
+			        $_img = '<img src="'.$this->helper('catalog/image')->init($_item, 'image')->resize(100).'" />';
+			        echo $this->helper('catalog/output')->productAttribute($_item, $_img, 'image');
+			    ?>
 			</td>
             <td>
 				<?php echo $this->htmlEscape($_item->getName()) ?>
@@ -164,7 +176,6 @@
                 <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
             <?php endif; ?>
             </td>
-
             <?php endif; ?>
         </tr>
     <?php endforeach; ?>
