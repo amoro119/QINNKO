@@ -286,6 +286,7 @@ Additional block dependant on product type
             <block type="catalog/product_view_type_grouped" name="product.info.grouped" as="product_type_data" template="catalog/product/view/type/grouped.phtml">
                 <block type="core/text_list" name="product.info.grouped.extra" as="product_type_data_extra"/>
             </block>
+			<block type="catalog/product_view_tabs" name="product.info.tabs" as="info_tabs"/>
         </reference>
     </PRODUCT_TYPE_grouped>
     <PRODUCT_TYPE_virtual translate="label" module="catalog">
