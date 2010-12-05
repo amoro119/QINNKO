@@ -148,7 +148,7 @@ input.checkbox { margin-right:3px; }
 input.qty { width:2.5em !important; }
 button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
 button.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
-button.button { overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer; }
+button.button { overflow:visible; width:auto; border:1px solid #B6B6B6; padding:0; margin:0; background:#fff; cursor:pointer; }
 button.button span { float:left; height:24px; padding:0 0 0 6px; font:bold 11px/25px Tahoma, Verdana, Arial, sans-serif; text-transform:uppercase; text-align:center; white-space:nowrap; color:#555; }
 button.button span span { background-position:100% 0; padding:0 15px 0 9px; }
 button.disabled span { color:#bbb !important; }
@@ -169,7 +169,7 @@ p.control input.radio { margin-right:6px; }
 /* Grouped fields */
 /*.form-list { width:535px; margin:0 auto; overflow:hidden; }*/
 .form-list li { margin:0 0 6px; }
-.form-list label { float:left; color:#555; font-weight:bold; position:relative; z-index:0; }
+.form-list label { float:left; color:#fff; font-weight:bold; position:relative; z-index:0; }
 .form-list label.required {}
 .form-list label.required em { float:right; font-style:normal; color:#eb340a; position:absolute; top:0; right:-7px; }
 .form-list li.control label { float:none; }
@@ -177,9 +177,9 @@ p.control input.radio { margin-right:6px; }
 .form-list li.control input.checkbox { margin-top:-1px; margin-right:4px; }
 .form-list li.control .input-box { clear:none; display:inline; width:auto; }
 /*.form-list li.fields { margin-right:-15px; }*/
-.form-list .input-box { display:block; clear:both; width:260px; }
+.form-list .input-box { display:block; float:right; width:260px; }
 .form-list .field { float:left; width:275px; }
-.form-list input.input-text { width:254px; }
+.form-list input.input-text { width:154px; }
 .form-list textarea { width:254px; height:10em; }
 .form-list select { width:260px; }
 .form-list li.wide .input-box { width:535px; }
@@ -251,7 +251,7 @@ p.control input.radio { margin-right:6px; }
 .form-list .customer-dob .dob-year { width:140px; }
 .form-list .customer-dob .dob-year input.input-text { width:134px; }
 
-.buttons-set { clear:both; margin:4em 0 0; padding:8px 0 0; border-top:1px solid #e4e4e4; text-align:right; }
+.buttons-set { clear:both; margin:4em 0 0; padding:8px 0 0; text-align:right; }
 .buttons-set p.required { margin:0 0 10px; }
 .buttons-set .back-link { float:left; margin:0; }
 .buttons-set button.button { float:right; margin-left:5px; }
@@ -298,7 +298,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 /* Page Heading */
 .page-title { width:100%; overflow:hidden; margin:0 0 16px; }
 .page-title h1,
-.page-title h2 { font-size:23px; font-weight:normal; }
+.page-title h2 { font-size:23px; font-weight:normal;color:#fff; }
 .page-title .separator { margin:0 3px; }
 .page-title .link-rss { float:right; margin:7px 0 0; }
 .title-buttons { text-align:right; }
@@ -1974,4 +1974,65 @@ div#tab3 .moreInfo {margin-bottom:0;}
 }
 .red{
 	color:red;
+}
+.account-login{
+	background:#000;
+}
+.new-users{
+	padding-left:10px;
+}
+.new-users h1{
+	color:#fff;
+	width:447px;
+	padding:20px 0 0 5px;
+}
+.new-users .content p{
+	color:#fff;
+	margin:0px;
+}
+.new-users a{
+	color:#fff;
+}
+.form-list{
+	padding:20px 0 0 0;
+}
+#send2{
+	float:right;
+	margin-right: 47px;
+	letter-spacing:1px;
+	line-height:21px;
+	display:inline;
+}
+#send2 span{
+	height:19px;
+}
+#send2 span span{
+	height:19px;
+	line-height:19px;
+	padding: 0 7px 0 3px;
+}
+.login-email{
+	margin-right:60px;
+}
+.new-users a.fpw{
+	display:block;
+	margin-left:120px;
+}
+.new-users .button.creatnew{
+	margin-left:30px;
+	width:280px;
+	margin-top:40px;
+	margin-bottom:100px;
+}
+.new-users .button.creatnew span{
+	height:30px;
+		font-size:20px;
+}
+.new-users .button.creatnew span span{
+	height:30px;
+	line-height:30px;
+	width:250px;
+}
+.login-pw{
+	margin-right:60px;
 }
