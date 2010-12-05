@@ -424,7 +424,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Misc */
 .links li { display:inline; }
-.links li.first { padding-left:0 !important; }
+.links li.first { }
 .links li.last { background:none !important; padding-right:0 !important; }
 
 .link-cart { font-weight:bold; color:#d62502; }
@@ -1061,7 +1061,7 @@ f/********** Product Prices > */
 .advanced-search-summary p { clear:both; font-weight:bold; margin:0; }
 
 /* CMS Home Page */
-.cms-home .main { padding:8px; }
+.cms-home .main { padding:0px 8px 8px 8px; }
 .cms-home .subtitle {}
 .cms-index-index .subtitle {}
 
@@ -1538,15 +1538,15 @@ f/********** Product Prices > */
 
 
 /* Footer ================================================================================ */
-.footer-container {padding-top:25px;padding-left:10px;}
-.footer { margin:15px 0 40px;text-align:center; }
+.footer-container {padding-top:0px;padding-left:10px;}
+.footer { margin:0px 0 40px;text-align:center; }
 .footer a { color:#444; }
 
 .footer .f-left { width:520px; }
 .footer .f-right { width:429px; }
 
 .footer ul { display:inline; }
-.footer li { display:inline; background:url(../images/bkg_pipe1.gif) 100% 50% no-repeat; padding:0 5px 0 0; margin:0 3px 0 0; }
+.footer li { display:inline; background:url(../images/bkg_pipe1.gif) 100% 50% no-repeat; padding:0 10px; }
 .footer .links li.last { background:none !important; padding-right:0 !important; }
 .footer .bugs { margin:0; color:#666; }
 .footer .bugs a { font-weight:bold; color:#444; }
