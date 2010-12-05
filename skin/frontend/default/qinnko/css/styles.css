@@ -1978,13 +1978,17 @@ div#tab3 .moreInfo {margin-bottom:0;}
 .account-login{
 	background:#000;
 }
-.new-users{
+.col2-set .new-users{
 	padding-left:10px;
+	width:415px;
+}
+.col2-set .registered-users{
+	width:525px;
 }
 .new-users h1{
 	color:#fff;
-	width:447px;
-	padding:20px 0 0 5px;
+	width:100%;
+	padding:20px 0 15px 5px;
 }
 .new-users .content p{
 	color:#fff;
@@ -2012,7 +2016,7 @@ div#tab3 .moreInfo {margin-bottom:0;}
 	padding: 0 7px 0 3px;
 }
 .login-email{
-	margin-right:60px;
+	margin-right:10px;
 }
 .new-users a.fpw{
 	display:block;
@@ -2034,5 +2038,5 @@ div#tab3 .moreInfo {margin-bottom:0;}
 	width:250px;
 }
 .login-pw{
-	margin-right:60px;
+	margin-right:10px;
 }
