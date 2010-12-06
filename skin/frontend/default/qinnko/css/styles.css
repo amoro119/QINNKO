@@ -170,9 +170,9 @@ p.control input.radio { margin-right:6px; }
 /*.form-list { width:535px; margin:0 auto; overflow:hidden; }*/
 .form-list li { margin:0 0 6px; }
 .form-list label { float:left; color:#fff; font-weight:bold; position:relative; z-index:0; }
-.form-list label.required {}
+.form-list label.required {color:#fff}
 .form-list label.required em { float:right; font-style:normal; color:#eb340a; position:absolute; top:0; right:-7px; }
-.form-list li.control label { float:none; }
+.form-list li.control label { float:none;color:#000; }
 .form-list li.control input.radio,
 .form-list li.control input.checkbox { margin-top:-1px; margin-right:4px; }
 .form-list li.control .input-box { clear:none; display:inline; width:auto; }
@@ -286,7 +286,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .note-msg,
 .notice-msg { border-style:solid !important; border-width:1px !important; padding:4px 12px !important; font-size:11px !important; font-weight:bold !important; }
 .error-msg { border-color:#f16048; background-color:#faebe7; color:#df280a; }
-.success-msg { border-color:#446423; background-color:#eff5ea; color:#3d6611; }
+.success-msg { border-color:#990000; background-color:#eff5ea; color:#990000; }
 .note-msg,
 .notice-msg { border-color:#fcd344; background-color:#fafaec; color:#3d6611; }
 
@@ -340,7 +340,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 /* Data Table */
 .data-table { width:100%; }
 .data-table tr.odd  { background:#ECECEC;}
-.data-table tr.even { background:#fcfcfc; }
+.data-table tr.even { background:#ECECEC; }
 .data-table tr.last th,
 .data-table tr.last td { border-bottom:0 !important; }
 .data-table th { padding:2px 8px; font-size:12px; text-transform:uppercase; white-space:nowrap;font-weight:bold;color:#999999; }
@@ -355,7 +355,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .data-table tfoot tr { background-color:#f3f3f3 !important; }
 .data-table tbody th { padding:3px 8px; font-size:11px; font-weight:bold; text-transform:none; white-space:normal; }
 .data-table tbody th,
-.data-table tbody td { border-bottom:1px solid #d9dde3; }
+.data-table tbody td { border-bottom:5px solid #fff; }
 .data-table tfoot strong { font-size:14px; }
 /* Bundle products tables */
 .data-table tbody.odd tr { background:#fff; }
@@ -363,7 +363,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .data-table tbody.odd tr td,
 .data-table tbody.even tr td { border-bottom:0; }
 .data-table tbody.odd tr.border td,
-.data-table tbody.even tr.border td { border-bottom:1px solid #d9dde3; }
+.data-table tbody.even tr.border td { border-bottom:1px solid #fff; }
 
 .data-table tbody td .option-label { font-weight:bold; font-style:italic; }
 .data-table tbody td .option-value { padding-left:10px; }
@@ -1144,11 +1144,11 @@ f/********** Product Prices > */
 /* Shopping Cart Totals */
 .cart .totals { background:#fff; padding:12px 0; }
 .cart .totals table { float:right; width:400px; margin:0 0 8px; }
-.cart .totals td { padding:0 0 0 15px; }
+.cart .totals td { padding:0 0 0 15px;color:#999999; }
 .cart .totals tr.last td {}
 .cart .totals tfoot td {}
 .cart .totals tfoot th strong,
-.cart .totals tfoot td strong { font-size:14px; font-weight:bold; color:#e02f00; }
+.cart .totals tfoot td strong { font-size:14px; font-weight:bold; color:#000; }
 .cart .totals .checkout-types { font-size:12px; padding:4px 0; text-align:right;float:right;}
 .cart .totals .checkout-types li { clear:both; margin:0 0 5px; }
 
@@ -1292,12 +1292,12 @@ f/********** Product Prices > */
 .opc .allow .step-title h2 { color:#fff; }
 .opc .allow .step-title a { display:block; font-size:10px; color:#fff; text-transform:uppercase; }
 
-.opc .active .step-title { background:#e46b00; border-color:#e46b00; border-top-color:#fff; padding-bottom:5px; color:#fff; cursor:default; }
+.opc .active .step-title { background:#000; border-color:#000; border-top-color:#fff; padding-bottom:5px; color:#fff; cursor:default; }
 .opc .active .step-title .number {}
 .opc .active .step-title h2 { color:#fff; }
 .opc .active .step-title a { display:none; }
 
-.opc .step { border:1px solid #ddd; border-top:0; background:#fbfbfb; padding:15px 30px; position:relative; }
+.opc .step { border:1px solid #ddd; border-top:0; background:#ECECEC; padding:15px 30px; position:relative; }
 .opc .step .tool-tip { right:30px; }
 
 #opc-login h3 { font-size:13px; border-bottom:1px solid #e4e4e4; padding-bottom:2px; text-transform:uppercase; }
@@ -2073,4 +2073,25 @@ div#tab3 .moreInfo {margin-bottom:0;}
 }
 #price_message ul{
 	list-style:disc;
+}
+.onepage .page-title h1 {
+    background: #000000;
+    letter-spacing: 2px;
+    padding: 3px 7px 2px;
+    font-family:Georgia;
+    float:left;
+}
+#billing-new-address-form label{
+	color:#000;
+}
+.form-list #billing-new-address-form .input-box{
+	clear:both;
+	float:none;
+}
+#login-form .form-list label.required{
+	color:#000;
+}
+#login-form .form-list .input-box{
+	float:none;
+	clear:both;
 }
