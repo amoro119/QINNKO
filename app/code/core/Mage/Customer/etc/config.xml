@@ -92,6 +92,7 @@
                 <dob><create>1</create><update>1</update></dob>
                 <taxvat><create>1</create><update>1</update></taxvat>
                 <gender><create>1</create><update>1</update></gender>
+				<title><create>1</create><update>1</update></title>
             </customer_account>
         </fieldsets>
 
@@ -306,7 +307,7 @@ T: {{var telephone}}
                 <middlename_show></middlename_show>
                 <suffix_show></suffix_show>
                 <suffix_options></suffix_options>
-                <dob_show></dob_show>
+                <dob_show>true</dob_show>
                 <gender_show></gender_show>
             </address>
             <startup>
