@@ -2040,3 +2040,57 @@ div#tab3 .moreInfo {margin-bottom:0;}
 .login-pw{
 	margin-right:10px;
 }
+.contact-form{
+	width:100%;
+	background:#000;
+	float:left;
+	padding:30px;
+}
+.contact-form .legend{
+	font-size:12px;
+	color:#999;
+	margin:20px 0;
+}
+.contact-form *{
+	color:#fff;
+}
+.contact-form .main{
+	width:510px;
+
+	background:transparent;
+}
+
+.contact-form .field{
+	float:left;
+	clear:both;
+	width:506px;
+	margin:5px 0;
+}
+
+.contact-form .field label{
+	float:left;
+}
+
+.contact-form .input-box input{
+	width:270px;
+	color:#000;
+	float:right;
+}
+.contact-form .required em{
+	color:red;
+}
+
+.contact-form .buttons-set{
+	float:left;
+	padding:0;
+	margin:0;
+}
+.contact-form .buttons-set button{
+	margin:0;
+}
+
+.contact-form textarea{
+	width:500px;
+	height:150px;
+	color:#000;
+}
