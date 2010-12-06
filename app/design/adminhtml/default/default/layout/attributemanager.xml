@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<layout version="0.9.1.1">
+<!-- informations concernant la page d'accueil du module -->
+    <attributemanager_index>
+    	<!-- informations concernant le block content -->
+        <reference name="content">
+            <block type="attributemanager/index"  name="attributemanager"  as="attributemanager" template="attributemanager/index.phtml" />
+        </reference>
+    </attributemanager_index>
+    
+    
+    <attributemanager_category>
+        <reference name="content">
+            <block type="attributemanager/attributemanagergrid"  name="attributemanagergrid"  as="attributemanagergrid" template="attributemanager/grid.phtml" />
+        </reference>
+    </attributemanager_category>
+    <attributemanager_customer>
+        <reference name="content">
+            <block type="attributemanager/attributemanagergrid"  name="attributemanagergrid"  as="attributemanagergrid" template="attributemanager/grid.phtml" />
+        </reference>
+    </attributemanager_customer>
+    <attributemanager_address>
+        <reference name="content">
+            <block type="attributemanager/attributemanagergrid"  name="attributemanagergrid"  as="attributemanagergrid" template="attributemanager/grid.phtml" />
+        </reference>
+    </attributemanager_address>
+    
+    <attributemanager_edit>
+        <reference name="content">
+            <block type="attributemanager/attributemanageredit"  name="attributemanageredit"  as="attributemanageredit" template="attributemanager/options.phtml" />
+        </reference>
+    </attributemanager_edit>
+</layout>

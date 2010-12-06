@@ -145,7 +145,7 @@
 							<?php endif ?>
 							<div class="description">
 								<h2><?php echo $this->__('Product Description') ?>:</h2>
-								<p><?php echo $this->helper('catalog/output')->productAttribute($_item, $_item->getDescription(), 'description') ?></p>
+								<p><?php echo $this->helper('catalog/output')->productAttribute($_item, Mage::helper('core/string')->truncate($_item->getDescription(),160), 'description') ?></p>
 							</div>
 							<div>
 								<h2><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->__('View Product') ?></a></h2>
