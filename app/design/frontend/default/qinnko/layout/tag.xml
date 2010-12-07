@@ -42,12 +42,7 @@ Default layout, loads most of the pages
 Customer account pages, rendered for all tabs in dashboard
 -->
 
-    <customer_account>
-        <!-- Mage_Tag -->
-        <reference name="customer_account_navigation">
-            <action method="addLink" translate="label" module="tag"><name>tags</name><path>tag/customer/</path><label>My Tags</label></action>
-        </reference>
-    </customer_account>
+
 
 <!--
 Customer account home dashboard layout

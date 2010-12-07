@@ -96,7 +96,7 @@ ul,ol         { list-style:none; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
 .main-container {}
-.main { background:#fff; padding:16px 20px 0 12px; min-height:350px;overflow:hidden; }
+.main { background:#fff; padding:16px 20px 0 12px; min-height:400px;overflow:hidden; }
 
 /* Base Columns */
 .col-left { float:left; width:242px; background:#000000;margin-bottom:-9999px;padding:0 0 9999px; }
@@ -104,12 +104,13 @@ ul,ol         { list-style:none; }
 .col-right { float:right; width:220px; padding:0 0 1px; }
 
 /* 1 Column Layout */
-.col1-layout .main { padding:0px 0px 8px 10px; }
+.col1-layout .main { padding:0px 0px 0px 10px; }
 .col1-layout .col-main { float:none; width:auto; }
 
 /* 2 Columns Layout */
 .col2-left-layout .col-main { float:right; }
 .col2-right-layout .col-main {}
+
 
 /* 3 Columns Layout */
 .col3-layout .col-main { width:452px; }
@@ -279,8 +280,8 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .messages,
 .messages ul { list-style:none !important; margin:0 !important; padding:0 !important; }
 .messages { width:100%; overflow:hidden; }
-.messages li { margin:0 0 10px !important; }
-.messages li li { margin:0 0 3px !important; }
+.messages li { margin:0 0 10px !important;font-size:12px; }
+.messages li li { margin:0 0 3px !important;font-size:12px; }
 .error-msg,
 .success-msg,
 .note-msg,
@@ -572,8 +573,8 @@ tr.summary-details-excluded { font-style:italic; }
 /* Block: Account */
 .block-account .block-title { border:0; background:#666; }
 .block-account .block-title strong { color:#fff; }
-.block-account .block-content li a { display:block; border-bottom:1px solid #ddd; padding:3px 0; color:#5f5d5c; text-decoration:none !important; }
-.block-account .block-content li a:hover { color:#444; }
+.block-account .block-content li a { display:block; border-bottom:1px solid #ddd; padding:3px 0; color:#fff; text-decoration:none !important; }
+.block-account .block-content li a:hover { color:#999; }
 .block-account .block-content li.last a { border-bottom:0; }
 .block-account .block-content li.current { border-bottom:1px solid #ddd; padding:3px 0; }
 .block-account .block-content li.current.last { border-bottom:0; }
@@ -1310,7 +1311,7 @@ f/********** Product Prices > */
 #opc-review .step { padding:0; }
 #opc-review .product-name { font-weight:bold; }
 #opc-review .item-options { margin:5px 0 0; }
-#opc-review .buttons-set { border:0; padding:15px 30px; }
+#opc-review .buttons-set { border:0;padding: 15px 6px 15px 30px; }
 #opc-review .buttons-set p { margin:0; line-height:28px; }
 #opc-review .buttons-set .please-wait { height:28px; line-height:28px; }
 
@@ -1389,7 +1390,7 @@ f/********** Product Prices > */
 /* General Box */
 .box-account { margin:0 0 15px; }
 .box-account .box-head { margin:0 0 5px; text-align:right; }
-.box-account .box-head h2 { float:left; margin:0; font-size:14px; font-weight:bold; color:#4f8100; }
+.box-account .box-head h2 { float:left; margin:0; font-size:14px; font-weight:bold; color:#000; }
 .box-account .box-head a { font-size:10px; text-transform:uppercase; }
 
 .dashboard .box .box-title { background:#f1f1f1; padding:2px 10px; margin:0 0 12px; text-align:right; }
@@ -1542,7 +1543,7 @@ f/********** Product Prices > */
 
 /* Footer ================================================================================ */
 .footer-container {padding-top:0px;padding-left:10px;}
-.footer { margin:0px 0 40px;text-align:center; }
+.footer { margin:0px 0 40px;text-align:center;padding-top:8px; }
 .footer a { color:#444; }
 
 .footer .f-left { width:520px; }
@@ -2242,4 +2243,47 @@ div#tab3 .moreInfo {margin-bottom:0;}
 .account-create p.required{
 	clear:both;
 	margin-right:15px;
+}
+.main.account .page-title h1, .page-title h2{
+	color:#000;
+}
+.main.account .col-left{
+	width:220px;
+}
+.main.account .form-list label.required{
+	color:#000;
+}
+.main.account .form-list .input-box{
+	clear:both;
+	float:none;
+}
+.main.account .form-list label{
+	color:#000;
+}
+.main.account .form-list input.input-text {
+    width: 254px;
+}
+.main.account .form-list li.wide input.input-text{
+	width:529px;
+}
+.main.account .name-lastname{
+	padding-top:0;
+}
+.onepage .data-table tfoot tr{
+	background:#ECECEC;
+}
+.onepage .data-table thead, .data-table thead tr{
+	background:#ECECEC!important;
+}
+.onepage .data-table tfoot {
+	background:#ECECEC;
+}
+.onepage .data-table tfoot tr{
+	background:#ECECEC!important;
+}
+#review-buttons-container button.button{
+	background:none;
+}
+#checkout-review-table{
+	margin-left:20px;
 }
