@@ -104,7 +104,7 @@ ul,ol         { list-style:none; }
 .col-right { float:right; width:220px; padding:0 0 1px; }
 
 /* 1 Column Layout */
-.col1-layout .main { padding:16px 0px 40px 10px; }
+.col1-layout .main { padding:0px 0px 8px 10px; }
 .col1-layout .col-main { float:none; width:auto; }
 
 /* 2 Columns Layout */
@@ -286,7 +286,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .note-msg,
 .notice-msg { border-style:solid !important; border-width:1px !important; padding:4px 12px !important; font-size:11px !important; font-weight:bold !important; }
 .error-msg { border-color:#f16048; background-color:#faebe7; color:#df280a; }
-.success-msg { border-color:#990000; background-color:#eff5ea; color:#990000; }
+.success-msg { border-color:#3D6611; background-color:#eff5ea; color:#3D6611; }
 .note-msg,
 .notice-msg { border-color:#fcd344; background-color:#fafaec; color:#3d6611; }
 
@@ -1371,7 +1371,10 @@ f/********** Product Prices > */
 .account-login .content h2 { margin:0 -10px 12px; background:#f1f1f1; padding:2px 10px; font-size:13px; line-height:1.25; }
 .account-login .buttons-set {}
 
-.account-create {}
+.account-create {
+	background:#000;
+	color:#fff;
+}
 /* Account Login/Create Pages ============================================================ */
 
 
@@ -2006,6 +2009,8 @@ div#tab3 .moreInfo {margin-bottom:0;}
 	letter-spacing:1px;
 	line-height:21px;
 	display:inline;
+	border: 1px solid #B6B6B6;
+	height:21px;
 }
 #send2 span{
 	height:19px;
@@ -2027,6 +2032,7 @@ div#tab3 .moreInfo {margin-bottom:0;}
 	width:280px;
 	margin-top:40px;
 	margin-bottom:100px;
+	border:1px solid #B6B6B6;
 }
 .new-users .button.creatnew span{
 	height:30px;
@@ -2148,4 +2154,92 @@ div#tab3 .moreInfo {margin-bottom:0;}
 #login-form .form-list .input-box{
 	float:none;
 	clear:both;
+}
+.account-login #login-form .form-list .input-box{
+	float:right;
+	clear:none;
+}
+.account-login #login-form .form-list label.required{
+	color:#fff;
+}
+#checkout-step-login .buttons-set button.button{
+	border:1px solid #B6B6B6;
+}
+.account-create .fieldset .legend{
+	background:none;
+	color:#fff;
+}
+.account-create .profile{
+	width:446px;
+	float:left;
+}
+.account-create .form-list .field{
+	float:none;
+	width:100%;
+}
+.account-create .fieldset .legend{
+	font-size:23px;
+	margin-bottom:0px;
+	padding-top:20px;
+}
+.account-create .form-list select{
+	width:173px;
+}
+.account-create .form-list .input-box{
+	width:167px;
+	margin-right:170px;
+}
+.account-create .form-list li.control label{
+	color:#fff;
+}
+.account-create .form-list input.input-text{
+	width:167px;
+}
+.name-lastname{
+	padding-top:6px;
+}
+.account-create .form-list .input-box.customer-dob{
+	width:180px;
+	margin-right:157px;
+}
+.account-create .form-list .customer-dob .dob-year input.input-text{
+	width:46px;
+}
+.account-create .form-list .customer-dob .dob-year{
+	width:60px;
+}
+.account-create .form-list .customer-dob label{
+	color:#fff;
+}
+.account-create .fieldwrap{
+	border-bottom:1px solid #666;
+	width:930;
+	padding-bottom:30px;
+	margin:0 15px;
+}
+.account-create .password{
+	margin:0;
+	width:446px;
+	float:right;
+	padding-top:96px;
+}
+.account-create .password .confirmpw{
+	padding-top:6px;
+}
+.addressfields .form-list .input-box{
+	margin-right:200px;
+}
+.account-create .addressfields{
+	width:473px;
+}
+.account-create .form-list li.control .input-box{
+	float:none;
+	margin-right:5px;
+}
+.account-create .buttons-set{
+	margin-top:0;
+}
+.account-create p.required{
+	clear:both;
+	margin-right:15px;
 }
