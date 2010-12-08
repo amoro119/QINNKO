@@ -96,7 +96,7 @@ ul,ol         { list-style:none; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
 .main-container {}
-.main { background:#fff; padding:16px 20px 0 12px; min-height:400px;overflow:hidden; }
+.main { background:#fff; padding:16px 20px 0 12px; min-height:350px;overflow:hidden; }
 
 /* Base Columns */
 .col-left { float:left; width:242px; background:#000000;margin-bottom:-9999px;padding:0 0 9999px; }
@@ -246,11 +246,11 @@ p.control input.radio { margin-right:6px; }
 .form-list .customer-dob input.input-text { display:block; width:74px; }
 .form-list .customer-dob label { font-size:10px; font-weight:normal; color:#888; }
 .form-list .customer-dob .dob-day,
-.form-list .customer-dob .dob-month { width:60px; }
+.form-list .customer-dob .dob-month { width:57px; }
 .form-list .customer-dob .dob-day input.input-text,
 .form-list .customer-dob .dob-month input.input-text { width:46px; }
-.form-list .customer-dob .dob-year { width:140px; }
-.form-list .customer-dob .dob-year input.input-text { width:134px; }
+.form-list .customer-dob .dob-year { width:135px; }
+.form-list .customer-dob .dob-year input.input-text { width:124px; }
 
 .buttons-set { clear:both; margin:4em 0 0; padding:8px 0 0; text-align:right; }
 .buttons-set p.required { margin:0 0 10px; }
@@ -2286,4 +2286,14 @@ div#tab3 .moreInfo {margin-bottom:0;}
 }
 #checkout-review-table{
 	margin-left:20px;
+}
+#checkout-step-shipping .form-list label.required{
+	color:#000;
+}
+#checkout-step-shipping .form-list .input-box{
+	clear:both;
+	float:none;
+}
+#checkout-step-shipping .form-list label{
+	color:#000;
 }
