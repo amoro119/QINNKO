@@ -2297,3 +2297,17 @@ div#tab3 .moreInfo {margin-bottom:0;}
 #checkout-step-shipping .form-list label{
 	color:#000;
 }
+.form-list .customer-dob .dob-year input.input-text {
+    width: 74px;
+}
+.main.account .form-list .customer-dob input.input-text {
+    display: block;
+    width: 74px;
+}
+.main.account .form-list .customer-dob .dob-day input.input-text, .form-list .customer-dob .dob-month input.input-text {
+    width: 46px;
+}
+.main.account .form-list .customer-dob .dob-month, .form-list .customer-dob .dob-day, .form-list .customer-dob .dob-year {
+    float: left;
+    width: 85px;
+}

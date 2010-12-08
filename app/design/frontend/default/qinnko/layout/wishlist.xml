@@ -41,9 +41,9 @@ Default layout, loads most of the pages
         </reference>
 
         <!-- Mage_Wishlist -->
-        <reference name="left">
+         <!--<reference name="left">
             <block type="wishlist/customer_sidebar" name="wishlist_sidebar" as="wishlist" after="cart_sidebar" template="wishlist/sidebar.phtml"/>
-        </reference>
+        </reference>-->
 
     </default>
 
