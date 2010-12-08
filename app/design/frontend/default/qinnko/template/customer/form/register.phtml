@@ -122,6 +122,14 @@
                         <input type="text" name="street[]" value="<?php echo $this->htmlEscape($this->getFormData()->getStreet(1)) ?>" title="<?php echo $this->__('Street Address') ?>" id="street_1" class="input-text required-entry" />
                     </div>
                 </li>
+				<li class="fields">
+					<div class="field">
+                        <label for="zip" class="required"><em>*</em><?php echo $this->__('Zip/Postal Code') ?></label>
+                        <div class="input-box">
+                            <input type="text" name="postcode" value="<?php echo $this->htmlEscape($this->getFormData()->getPostcode()) ?>" title="<?php echo $this->__('Zip/Postal Code') ?>" id="zip" class="input-text validate-zip-international required-entry" />
+                        </div>
+                    </div>
+				</li>
                   <li class="fields">
                     <div class="field">
                         <label for="city" class="required"><em>*</em><?php echo $this->__('City') ?></label>
@@ -145,12 +153,6 @@
                     </div>
                 </li>
                 <li class="fields">
-                    <div class="field">
-                        <label for="zip" class="required"><em>*</em><?php echo $this->__('Zip/Postal Code') ?></label>
-                        <div class="input-box">
-                            <input type="text" name="postcode" value="<?php echo $this->htmlEscape($this->getFormData()->getPostcode()) ?>" title="<?php echo $this->__('Zip/Postal Code') ?>" id="zip" class="input-text validate-zip-international required-entry" />
-                        </div>
-                    </div>
                     <div class="field" style="padding-top:6px;">
                         <label for="country" class="required"><em>*</em><?php echo $this->__('Country') ?></label>
                         <div class="input-box">
@@ -189,9 +191,9 @@
     <script type="text/javascript">
     //<![CDATA[
         var dataForm = new VarienForm('form-validate', true);
-        <?php if($this->getShowAddressFields()): ?>
+        <?php// if($this->getShowAddressFields()): ?>
         new RegionUpdater('country', 'region', 'region_id', <?php echo $this->helper('directory')->getRegionJson() ?>, undefined, 'zip');
-        <?php endif; ?>
+        <?php// endif; ?>
     //]]>
     </script>
 </div>
