@@ -2311,3 +2311,6 @@ div#tab3 .moreInfo {margin-bottom:0;}
     float: left;
     width: 85px;
 }
+.account-create .form-list .customer-dob .dob-day {
+    width: 57px;
+}
