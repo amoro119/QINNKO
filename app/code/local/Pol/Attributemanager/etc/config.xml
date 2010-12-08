@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<config>
+<!-- met en marche le module et permet le support d'installation -->
+    <modules>
+        <Pol_Attributemanager>
+            <version>0.9.1.2</version>
+        </Pol_Attributemanager>
+    </modules>
+    
+    <admin>
+        <routers>
+			<attributemanager>
+				<use>admin</use>
+				<args>
+					<module>Pol_Attributemanager</module>
+					<frontName>attributemanager</frontName>
+				</args>
+			</attributemanager>
+        </routers>
+    </admin>
+    
+    <frontend>
+        <routers></routers>
+        <events></events>
+        <translate></translate>
+        <layout></layout>
+    </frontend>
+    
+    <default>
+    	<config_vars></config_vars>
+   	</default>
+    
+    <adminhtml>
+		<menu>
+			<system>
+				<children>
+					<pol> 
+						<title>Attribute Manager</title>
+						<sort_order>20</sort_order>           
+						<children>
+							<list translate="title" module="attributemanager">
+								<title>List Attribute Types</title>
+								<action>attributemanager</action>
+							</list>
+							<category translate="title" module="attributemanager">
+								<title>Category's Attributes</title>
+								<action>attributemanager/index/catalog_category/filter//</action>
+							</category>
+							<customer translate="title" module="attributemanager">
+								<title>Customer's Attributes</title>
+								<action>attributemanager/index/customer/filter//</action>
+							</customer>
+							<customer_address translate="title" module="attributemanager">
+								<title>Customer address's Attributes</title>
+								<action>attributemanager/index/customer_address/filter//</action>
+							</customer_address>
+							<order translate="title" module="attributemanager">
+								<title>Order's Attributes</title>
+								<action>attributemanager/index/order/filter//</action>
+							</order>
+							<order_address translate="title" module="attributemanager">
+								<title>Order address's Attributes</title>
+								<action>attributemanager/index/order_address/filter//</action>
+							</order_address>
+							<order_item translate="title" module="attributemanager">
+								<title>Order item's Attributes</title>
+								<action>attributemanager/index/order_item/filter//</action>
+							</order_item>
+							<order_payment translate="title" module="attributemanager">
+								<title>Order payment's Attributes</title>
+								<action>attributemanager/index/order_payment/filter//</action>
+							</order_payment>
+							<order_status_history translate="title" module="attributemanager">
+								<title>Order status history's Attributes</title>
+								<action>attributemanager/index/order_status_history/filter//</action>
+							</order_status_history>
+							<invoice translate="title" module="attributemanager">
+								<title>Invoice's Attributes</title>
+								<action>attributemanager/index/invoice/filter//</action>
+							</invoice>
+							<invoice_item translate="title" module="attributemanager">
+								<title>Invoice item's Attributes</title>
+								<action>attributemanager/index/invoice_item/filter//</action>
+							</invoice_item>
+							<invoice_comment translate="title" module="attributemanager">
+								<title>Invoice comment's Attributes</title>
+								<action>attributemanager/index/invoice_comment/filter//</action>
+							</invoice_comment>
+						</children>
+					</pol> 
+				</children>
+			</system>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Pol_Attributemanager>
+							<title>Attributemanager Module</title>
+							<sort_order>10</sort_order>
+						</Pol_Attributemanager>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<attributemanager>
+					<file>attributemanager.xml</file>
+				</attributemanager>
+			</updates>
+		</layout>
+		<!-- <translate>
+		            <modules>
+		                <Pol_Attributemanager>
+		                    <files>
+		                        <default>Pol_Attributemanager.csv</default>
+		                    </files>
+		                </Pol_Attributemanager>
+		            </modules>
+        	</translate>-->
+    </adminhtml> 
+      
+    <global>
+    	<!-- active les modeles du module -->
+        <models>
+            <attributemanager>
+                <class>Pol_Attributemanager_Model</class>
+            </attributemanager>
+            <!-- <categoriesattributes_mysql4>
+                <class>Pol_CategoriesAttributes_Model_Mysql4</class>
+                <entities>
+                    <categoriesattributes>
+                        <table>categoriesattributes</table>
+                    </categoriesattributes>
+                </entities>
+            </categoriesattributes_mysql4>-->
+        </models>
+        <blocks>
+            <attributemanager>
+                <class>Pol_Attributemanager_Block</class>
+            </attributemanager>
+        </blocks>
+        <helpers>
+            <attributemanager>
+                <class>Pol_Attributemanager_Helper</class>
+            </attributemanager>
+        </helpers>
+        <!-- ressource correspond aux connexion à la base -->
+        <resources>
+        <!-- Permet l'intallation des tables dans la base -->
+            <!-- <attributemanager_setup>
+                <setup>
+                    <module>Pol_Attributemanager</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </attributemanager_setup>
+            <attributemanager_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </attributemanager_write>
+            <attributemanager_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </attributemanager_read>-->
+        </resources>
+    </global>
+</config>

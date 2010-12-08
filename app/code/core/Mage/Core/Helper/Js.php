@@ -181,7 +181,7 @@ class Mage_Core_Helper_Js extends Mage_Core_Helper_Abstract
                     $this->__('Please use only letters (a-z or A-Z), numbers (0-9) or underscores (_) in this field, first character must be a letter.'),
                 'Please input a valid CSS-length. For example 100px or 77pt or 20em or .5ex or 50%' => $this->__('Please input a valid CSS-length. For example 100px or 77pt or 20em or .5ex or 50%'),
                 'Maximum length exceeded.' => $this->__('Maximum length exceeded.'),
-
+				'Please enter a valid full date.' => $this->__('Please enter a valid full date.'),
 
     //Mage_Rule
 
