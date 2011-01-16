@@ -26,7 +26,7 @@
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
 
-body          { background:#fff; font:12px/1.55 arial, helvetica, sans-serif; color:#000; text-align:center; }
+body          { background:url(../images/bg.jpg) repeat-x 0 0; font:12px/1.55 arial, helvetica, sans-serif; color:#000; text-align:center; }
 
 img           { border:0; vertical-align:top; }
 
@@ -91,12 +91,12 @@ ul,ol         { list-style:none; }
 
 /* Layout ================================================================================ */
 .wrapper {}
-.page { width:960px; margin:15px auto 0; text-align:left; }
+.page { width:960px; margin:0px auto 0; text-align:left;}
 .page-print { background:#fff; padding:25px 30px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
-.main-container {}
-.main { background:#fff; padding:16px 20px 0 12px; min-height:350px;overflow:hidden; }
+.main-container {background:#fff; }
+.main { background:#fff; padding:0px 20px 0 12px; min-height:350px;overflow:hidden; }
 
 /* Base Columns */
 .col-left { float:left; width:242px; background:#000000;margin-bottom:-9999px;padding:0 0 9999px; }
@@ -453,7 +453,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Header ================================================================================ */
 .logo { float:left; }
-.header-container {}
+.header-container {background:#fff; }
 
 .header { margin:0 0 0; }
 .header .logo { float:left; text-decoration:none !important; }
@@ -1980,7 +1980,7 @@ div#tab3 .moreInfo {margin-bottom:0;}
 	color:red;
 }
 .account-login{
-	background:#000;
+	background:#000 url("../images/background-strip.png") repeat-x 0 0;
 }
 .col2-set .new-users{
 	padding-left:10px;
