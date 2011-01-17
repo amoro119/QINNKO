@@ -204,7 +204,7 @@ Product view
                 
                 <block type="catalog/product_list_upsell" name="product.info.upsell" as="upsell_products" template="catalog/product/list/upsell.phtml">
                     <action method="setColumnCount"><columns>6</columns></action>
-                    <action method="setItemLimit"><type>upsell</type><limit>6</limit></action>
+                    <action method="setItemLimit"><type>upsell</type><limit>100</limit></action>
                 </block>
                 
                 <block type="catalog/product_view_tabs" name="product.info.tabs" as="info_tabs" template="catalog/product/view/tabs.phtml" >

@@ -33,15 +33,6 @@
 <div id="tabbed-info">
         <div id="tab-view">
             <div id="demo" class="yui-navset">
-
-                <ul class="yui-nav">
-    <?php foreach ($this->getTabs() as $_index => $_tab): ?>
-        <?php if($this->getChildHtml($_tab['alias'])): ?>
-                    <li class="selected"><a href="#tab1"><span class="tl"></span><?php echo $_tab['title']?><span class="tr"></span> </a></li>
-        <?php endif; ?>
-    <?php endforeach; ?>
-                    </ul>
-                <div class="top-line"><!-- --></div>
                 <div class="yui-content">
 <?php foreach ($this->getTabs() as $_index => $_tab): ?>
     <?php if($this->getChildHtml($_tab['alias'])): ?>
@@ -51,7 +42,6 @@
                                 <span class="en-first-desc"><?php echo $this->getChildHtml($_tab['alias']) ?></span>
         					</p>
                         </div>
-                        <a class="expand-details" href="#"><img src="/skin/frontend/default/qinnko/images/pp-more-info-off.gif" alt="More Info" /></a>
                         </div>
     <?php endif; ?>
 <?php endforeach; ?>

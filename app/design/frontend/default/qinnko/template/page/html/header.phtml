@@ -29,7 +29,7 @@
 ?>
 <div class="header-container">
     <div class="header">
-    	<div style="width:960px;height:60px">
+    	<div style="width:910px;height:60px">
         <?php if ($this->getIsHomePage()):?>
         <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
         <?php else:?>
@@ -39,7 +39,7 @@
         </div>
         <div class="clear">       	
         </div>
-        <div style="width:960px;height:25px">
+        <div style="width:910px;height:25px">
         <?php echo $this->getChildHtml('topMenu') ?>
         <?php echo $this->getChildHtml('topSearch') ?>
      	</div>

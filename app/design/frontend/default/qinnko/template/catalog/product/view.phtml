@@ -49,9 +49,6 @@
         </div>
 
         <div class="product-shop">
-        	 <div class="product-designer">
-                <h1><?php echo $_helper->productAttribute($_product, $_product->getdesigner(), 'designer') ?></h1>
-            </div>
             <div class="product-name">
                 <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
             </div>
@@ -115,9 +112,8 @@
     //]]>
     </script>
     </div>
-
     <div class="product-collateral">
-        <?php echo $this->getChildHtml('product_viewed') ?>
+        <?php echo $this->getChildHtml('upsell_products') ?>
         <?php echo $this->getChildHtml('product_additional_data') ?>
     </div>
 </div>
