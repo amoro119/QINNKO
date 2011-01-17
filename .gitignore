@@ -1,6 +1,6 @@
-/var/*/
-!/var/backups/
-/app/etc/local.xml
-/Media/*
-/media/*
-/includes/*
+/store/var/*/
+!/store/var/backups/
+/store/app/etc/local.xml
+/store/Media/*
+/store/media/*
+/store/includes/*

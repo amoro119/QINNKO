@@ -25,8 +25,10 @@
  */
 ?>
 <?php
-    $_base_url = $this->helper('core/url')->getHomeUrl();
-    $class = str_replace($_base_url, '', $this->helper('core/url')->getCurrentUrl());
+	$_store = Mage::app()->getStore();
+    $_base_url = $_store->getUrl('');
+	$_current_url = $this->helper('core/url')->getCurrentUrl();
+	if(strpos($_current_url,'?')>0)$_current_url= substr($_current_url,0,strpos($_current_url,'?'));
 ?>
 <?php
 /**
@@ -43,11 +45,12 @@
  * string If specified wraps children list in div with this class
  */
 ?>
+
 <?php $_menu = $this->renderCategoriesMenuHtml(0,'level-top') ?>
 <?php if($_menu): ?>
 <div class="nav-container">
     <ul id="nav">
-    	<li class="<?php if($_base_url == "?___store=chinese&___from_store=english") echo "active"; ?>"><a href="<?php echo $this->getBaseUrl() ?>">Home</a></li>
+    	<li class="<?php if($_base_url== $_current_url) echo "active"; ?>"><a href="<?php echo $_base_url ?>">Home</a></li>
         <?php echo $_menu ?>
         <li><a href="#">QINNKO定制</a></li>
         <li><a href="#">QINNKO的世界</a></li>
