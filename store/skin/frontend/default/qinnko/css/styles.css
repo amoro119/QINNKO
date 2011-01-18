@@ -95,8 +95,8 @@ ul,ol         { list-style:none; }
 .page-print { background:#fff; padding:25px 30px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
-.main-container {background:#fff; }
-.main { background:#fff; padding:0px 25px 0 25px; min-height:350px;overflow:hidden;width:910px;}
+.main-container {background:#fff;padding-bottom:25px;}
+.main { background:#fff; padding:0px 25px 0px 25px; min-height:350px;overflow:hidden;width:910px;}
 
 /* Base Columns */
 .col-left { float:left; width:222px; background:#000000;margin-bottom:-9999px;padding:0 0 9999px; }
@@ -1062,7 +1062,7 @@ f/********** Product Prices > */
 .advanced-search-summary p { clear:both; font-weight:bold; margin:0; }
 
 /* CMS Home Page */
-.cms-home .main { padding:0px 25px 8px 25px; }
+.cms-home .main { padding:0px 25px 0px 25px; }
 .cms-home .subtitle {}
 .cms-index-index .subtitle {}
 
