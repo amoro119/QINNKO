@@ -32,22 +32,41 @@
 ?>
 
 	
-<?
-	$_root = Mage::getModel('catalog/category'); 
-	if (!$_root->checkId(58)) {
-        return ;
-    }
+<?php
+	function loadSubCatalogByAttribute($parent_id,$key,$value){
+		$objects=Mage::getModel('catalog/category')->getResourceCollection()
+			->addAttributeToSelect('*')
+	        ->addAttributeToFilter('parent_id', $parent_id)
+			->addAttributeToFilter($key, $value)
+	        ->setPage(1,1);
+		foreach ($objects as $object) {
+	        return $object;
+	    }
+	}
 	$_categorypath = $this->getCurrentCategoryPath();
-	$_root->load(58);
+	$_level=count($_categorypath)-1;
+	if($_level<0){return;}
+	$root = Mage::getModel('catalog/category'); 
+	$root->load($_categorypath[$_level]);
+	if($_level>0){
+		$_active = Mage::getModel('catalog/category');
+		$_active->load($_categorypath[$_level-1]);
+		
+		$url_key=$_active->getUrlKey()=='men' ? 'women' : 'men';
+		$_unactive=loadSubCatalogByAttribute($_categorypath[$_level],'url_key',$url_key);
+	}else{
+		$_active=loadSubCatalogByAttribute($_categorypath[$_level],'url_key','women');
+		$_unactive=loadSubCatalogByAttribute($_categorypath[$_level],'url_key','men');
+	}
 ?>
 <div class="block block-layered-nav">
     <div class="block-title">
-        <strong><span>产品目录</span></strong>
+        <strong><span><?php echo $root->getName() ?></span></strong>
     </div>
     <div class="block-content">
-    	<h1 class="titlecurrent">女士</h1>
+		<h1 class="titlecurrent"><?php echo $_active->getName()?></h1>
     	<div id="basic-accordian">
-			<?php foreach ($_root->getChildrenCategories() as $_category) : ?>
+			<?php foreach ($_active->getChildrenCategories() as $_category) : ?>
     		<div id="test<?php echo $_category->getId()?>-header" class="accordion_headings<?php if (in_array($_category->getId(), $_categorypath)){echo " header_highlight";} ?>"><?php echo $_category->getName()?></div>
     			<div id="test<?php echo $_category->getId()?>-content">
 					<?php foreach ($_category->getChildrenCategories() as $_subCategory): ?>
@@ -56,7 +75,7 @@
     			</div>
 			<?php endforeach ?>
     	</div>
-    	<h1 class="title"><a href="/a-a/c-a.html">男士</a></h1>
-        <script type="text/javascript">decorateDataList('narrow-by-list2')</script>
+    	<h1 class="title"><a href="<?php echo $this->getCategoryUrl($_unactive) ?>"><?php echo $_unactive->getName() ?></a></h1>
+        <script type="text/javascript">decorateDataList('narrow-by-list2')</script>	
     </div>
 </div>
