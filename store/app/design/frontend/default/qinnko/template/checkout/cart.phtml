@@ -39,18 +39,23 @@
            <li><?php echo $this->__('NEED HELP? Call +44 (0)203 471 4510') ?><span class="sep">|</span></li>
            <li><a href="#"><?php echo $this->__('Return policy') ?></a></li>
         </ul>
-    	</div>       
-        <?php if(!$this->hasError()): ?>
+    	</div>
+    	<div style="float:right;">
+    		
+    	</div>
+    	<div class="clear"></div>
+    </div>
+    <?php if(!$this->hasError()): ?>
         <ul class="checkout-types">
         <?php foreach ($this->getMethods('top_methods') as $method): ?>
             <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
-            <li><?php echo $methodHtml; ?></li>
-            <li style="padding-top:10px"><button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><img alt="Continue Shopping" src="/skin/frontend/default/qinnko/images/continue_shopping.gif"></span></button></li>
+            <li style="float:left;padding-top:12px;"><button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><img alt="Continue Shopping" src="/store/skin/frontend/default/qinnko/images/continue_shopping.gif"></span></button></li>
+            <li style="float:right;padding-top:9px;"><?php echo $methodHtml; ?></li>
             <?php endif; ?>
         <?php endforeach; ?>
         </ul>
+        <div class="clear"></div>
         <?php endif; ?>
-    </div>
     <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
     <?php echo $this->getChildHtml('form_before') ?>
     <form action="<?php echo $this->getUrl('checkout/cart/updatePost') ?>" method="post">
@@ -77,27 +82,6 @@
             <?php endif; ?>
 
             <?php $mergedCells = ($this->helper('tax')->displayCartBothPrices() ? 2 : 1); ?>
-                <thead>
-                    <tr>
-                        <th rowspan="<?php echo $mergedCells; ?>" class="a-center"><?php echo $this->__('Item') ?></th>
-                        <th rowspan="<?php echo $mergedCells; ?>">&nbsp;</th>
-                        <th rowspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('Description') ?></span></th>
-                        <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
-                        <th rowspan="<?php echo $mergedCells; ?>" class="a-center"><span class="nobr"><?php echo $this->__('Move to Wishlist') ?></span></th>
-                        <?php endif ?>
-                        <th class="a-center" colspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('Unit Price') ?></span></th>
-                        <th rowspan="<?php echo $mergedCells; ?>" class="a-center"><?php echo $this->__('Qty') ?></th>
-                        <th class="a-center" colspan="<?php echo $mergedCells; ?>"><?php echo $this->__('Subtotal') ?></th>
-                    </tr>
-                    <?php if ($this->helper('tax')->displayCartBothPrices()): ?>
-                    <tr>
-                        <th class="a-right"><?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?></th>
-                        <th><?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?></th>
-                        <th class="a-right"><?php echo $this->helper('tax')->getIncExcTaxLabel(false) ?></th>
-                        <th><?php echo $this->helper('tax')->getIncExcTaxLabel(true) ?></th>
-                    </tr>
-                    <?php endif; ?>
-                </thead>
                 <tbody>
                 <?php foreach($this->getItems() as $_item): ?>
                     <?php echo $this->getItemHtml($_item) ?>
@@ -113,17 +97,11 @@
                 <div class="totals">
                     <?php echo $this->getChildHtml('totals'); ?>
                     <?php if(!$this->hasError()): ?>
-                                	<div id="price_message">
-            <ul>
-                <li>An item's price may change when you select your shipping destination. Please check the final total on the order summary page before completing payment.</li>
-                <li>Once your purchase has been completed, further items can not be added to this order.</li>
-            </ul>
-        </div>
                     <ul class="checkout-types">
                     <?php foreach ($this->getMethods('methods') as $method): ?>
                         <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
                         <li><?php echo $methodHtml; ?></li>
-                        <li style="padding-top:5px"><button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><img alt="Continue Shopping" src="/skin/frontend/default/qinnko/images/continue_shopping.gif"></span></button></li>
+                        <li style="padding-top:5px"><button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><img alt="Continue Shopping" src="/store/skin/frontend/default/qinnko/images/continue_shopping.gif"></span></button></li>
                         <?php endif; ?>
                     <?php endforeach; ?>
                     </ul>

@@ -99,8 +99,8 @@ ul,ol         { list-style:none; }
 .main { background:#fff; padding:0px 25px 0 25px; min-height:350px;overflow:hidden;width:910px;}
 
 /* Base Columns */
-.col-left { float:left; width:242px; background:#000000;margin-bottom:-9999px;padding:0 0 9999px; }
-.col-main { float:left; width:686px; padding:0 0 1px; }
+.col-left { float:left; width:222px; background:#000000;margin-bottom:-9999px;padding:0 0 9999px; }
+.col-main { float:left; width:686px; padding:0 0 0px; }
 .col-right { float:right; width:220px; padding:0 0 1px; }
 
 /* 1 Column Layout */
@@ -299,7 +299,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 /* Page Heading */
 .page-title { width:100%; overflow:hidden; margin:0 0 16px; }
 .page-title h1,
-.page-title h2 { font-size:23px; font-weight:normal;color:#fff; }
+.page-title h2 { font-size:26px; font-weight:normal;color:#000; }
 .page-title .separator { margin:0 3px; }
 .page-title .link-rss { float:right; margin:7px 0 0; }
 .title-buttons { text-align:right; }
@@ -340,8 +340,8 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 
 /* Data Table */
 .data-table { width:100%; }
-.data-table tr.odd  { background:#ECECEC;}
-.data-table tr.even { background:#ECECEC; }
+.data-table tr.odd  {}
+.data-table tr.even {}
 .data-table tr.last th,
 .data-table tr.last td { border-bottom:0 !important; }
 .data-table th { padding:2px 8px; font-size:12px; text-transform:uppercase; white-space:nowrap;font-weight:bold;color:#999999; }
@@ -1083,11 +1083,11 @@ f/********** Product Prices > */
 
 
 /* Shopping Cart ========================================================================= */
-.cart .page-title {}
+.cart .page-title {border-bottom:1px solid #efefef;padding-bottom:10px;margin-bottom:0px;}
 
 /* Checkout Types */
 .cart .page-title .checkout-types {}
-
+.cart .checkout-types{height:45px;border-bottom:2px solid #efefef;}
 /* Shopping Cart Table */
 .cart-table th { padding:2px 10px; }
 .cart-table td { padding:10px; }
@@ -1150,7 +1150,7 @@ f/********** Product Prices > */
 .cart .totals tfoot td {}
 .cart .totals tfoot th strong,
 .cart .totals tfoot td strong { font-size:14px; font-weight:bold; color:#000; }
-.cart .totals .checkout-types { font-size:12px; padding:4px 0; text-align:right;float:right;}
+.cart .totals .checkout-types { font-size:12px; padding:4px 0; text-align:right;}
 .cart .totals .checkout-types li { clear:both; margin:0 0 5px; }
 
 /* Options Tool Tip */
@@ -2105,9 +2105,7 @@ div#tab3 .moreInfo {margin-bottom:0;}
 	color:#000;
 }
 .cart .page-title h1{
-	background:#000;
-	letter-spacing: 2px;
-    padding: 3px 7px 2px;
+
 }
 .cart .page-title .checkout-types .button{
 	border:none;
@@ -2115,6 +2113,7 @@ div#tab3 .moreInfo {margin-bottom:0;}
 .checkout-nav{
 	float:left;
 	width:100%;
+	padding:10px 0 0 0;
 }
 .checkout-nav li{
 	float:left;
