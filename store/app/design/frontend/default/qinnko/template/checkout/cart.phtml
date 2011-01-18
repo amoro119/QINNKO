@@ -31,6 +31,33 @@
  * @see Mage_Checkout_Block_Cart
  */
 ?>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/shadowbox.js') ?>"></script>
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl('css/shadowbox.css') ?>" type="text/css" media="screen" charset="utf-8" />
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+	var html="<div></div>";
+	var	isLoggedIn=false;
+	<?php if($this->helper('customer')->isLoggedIn()) :?>
+		isLoggedIn=true;
+	<?php endif ?>
+	if(!isLoggedIn){
+		jQuery(document).ready(function($){
+			Shadowbox.init({
+				skipSetup: true
+			});
+			jQuery('.btn-checkout').attr('onclick',null);
+			jQuery('.btn-checkout').click(function(e){
+				Shadowbox.open({
+					content:"<?php echo Mage::getUrl('login') ?>",
+					player: 'iframe',
+					height:     400,
+			        width:      700
+				});
+			});
+		});
+	}
+//]]>
+</script>
 <div class="cart">
     <div class="page-title title-buttons">
     	<div style="float:left;">
