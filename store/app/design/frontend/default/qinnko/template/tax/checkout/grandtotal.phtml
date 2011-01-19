@@ -23,15 +23,9 @@
  * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
+/**
+ * @var $this Mage_Tax_Block_Checkout_Grandtotal
+ * @see Mage_Tax_Block_Checkout_Grandtotal
+ */
 ?>
-
-<?php $_product = $this->getProduct() ?>                            	
-<?php if ($this->helper('wishlist')->isAllow()) : ?>
-                            <div class="wishlist " id="add-wishlist">
-                                <div class="product-wishlist">
-                                	<a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>">
-                                		<?php echo $this->__('Add to my wish list') ?>
-									</a>
-                                            </div>
-                                        </div>
-<?php endif; ?>
+				                        <?php if ($this->includeTax() && $this->getTotalExclTax()>=0):?><div><?php echo $this->helper('checkout')->formatPrice($this->getTotalExclTax()) ?></div><?php echo $this->renderTotals('taxes', $this->getColspan()); ?><div><?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValue()) ?></div><?php else:?><div><?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValue()) ?></div><?php endif;?>

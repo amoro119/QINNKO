@@ -89,7 +89,6 @@
         <fieldset>
             <table id="shopping-cart-table" class="data-table cart-table">
                 <col width="1" />
-                <col width="1" />
                 <col />
             <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
                 <col width="1" />
@@ -118,17 +117,17 @@
             <script type="text/javascript">decorateTable('shopping-cart-table')</script>
         </fieldset>
     </form>
+    <?php echo $this->getChildHtml('totals'); ?>
+     <div class="clear"></div>
     <div class="cart-collaterals">
         <div class="col2-set">
-            <div class="col-2">
                 <div class="totals">
-                    <?php echo $this->getChildHtml('totals'); ?>
                     <?php if(!$this->hasError()): ?>
                     <ul class="checkout-types">
                     <?php foreach ($this->getMethods('methods') as $method): ?>
                         <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
-                        <li><?php echo $methodHtml; ?></li>
-                        <li style="padding-top:5px"><button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><img alt="Continue Shopping" src="/store/skin/frontend/default/qinnko/images/continue_shopping.gif"></span></button></li>
+                        <li style="float:left"><button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><img alt="Continue Shopping" src="/store/skin/frontend/default/qinnko/images/continue_shopping.gif"></span></button></li>
+                        <li  style="float:right"><?php echo $methodHtml; ?></li>
                         <?php endif; ?>
                     <?php endforeach; ?>
                     </ul>
@@ -136,6 +135,5 @@
                     <div class="clear"></div>
                 </div>
             </div>
-        </div>
     </div>
 </div>

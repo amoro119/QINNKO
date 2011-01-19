@@ -37,9 +37,6 @@
 <?php if (count($this->getGalleryImages()) > 0): ?>
 <div class="more-views" id="product-images">
 	<div id="thumbnails">
-            <div id="up-arrow">
-                        <img src="/skin/frontend/default/qinnko/images/uparrow.jpg" id="up-arrow-id" alt="up-arrow">
-                    </div>
                 <div id="thumbnails-mask">
                 <div id="thumbnails-container">
                 	<?php foreach ($this->getGalleryImages() as $_image): ?>
@@ -47,9 +44,6 @@
                     <?php endforeach; ?>
                     </div>
             </div>
-            <div id="down-arrow">
-                        <img src="/skin/frontend/default/qinnko/images/downarrow.jpg" id="down-arrow-id" alt="down-arrow">
-                    </div>
                 </div><!-- thumbnails -->
 </div>
 <?php endif; ?>
@@ -70,7 +64,6 @@
     ?>
 </p>
 </div>
-<p class="zoom-notice" id="track_hint"><?php echo $this->__('Double click on above image to view full picture') ?></p>
 <script type="text/javascript">
 //<![CDATA[
     Event.observe(window, 'load', function() {

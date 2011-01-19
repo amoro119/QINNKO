@@ -24,14 +24,20 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
+<?php
+/**
+ * Shopping cart totals template
+ *
+ * @see Mage_Checkout_Block_Cart
+ */
+?>
+    <div align="right" id="divTotal">
+			                        <div class="basketSubTotal">
+			                            <span class="inputlbl">Total</span>
+				                        <div><?php echo $this->renderTotals('footer'); ?></div>
+				                    </div>
+				                   <div id="pnlPricesIncludeTax">
+	(Prices include VAT.)
+</div>
+			                    </div>
 
-<?php $_product = $this->getProduct() ?>                            	
-<?php if ($this->helper('wishlist')->isAllow()) : ?>
-                            <div class="wishlist " id="add-wishlist">
-                                <div class="product-wishlist">
-                                	<a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>">
-                                		<?php echo $this->__('Add to my wish list') ?>
-									</a>
-                                            </div>
-                                        </div>
-<?php endif; ?>
