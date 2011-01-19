@@ -874,7 +874,7 @@ f/********** Product Prices > */
 
 /* Add to Links + Add to Cart */
 .add-to-box { margin:10px 0; }
-.add-to-box .add-to-cart { margin:10px 0; border:1px solid #eee; background-color:#f8f8f8; padding:10px; text-align:right; }
+.add-to-box .add-to-cart { margin:10px 0; border:none;  padding:10px; text-align:right; }
 .add-to-box .add-to-cart .paypal-logo { float:left; }
 .add-to-box .or { display:none !important; }
 .add-to-box .add-to-links { margin:10px 0; text-align:right; }
@@ -1952,6 +1952,8 @@ div#tab3 .moreInfo {margin-bottom:0;}
 .detail-panel-content{
 	padding: 10px 32px 10px 14px;	
 	width: 174px;
+	height:174px;
+	overflow:hidden;
 	background:transparent url('../images/bubble_top.gif') no-repeat top left;
 }
 .detail-panel-content select{

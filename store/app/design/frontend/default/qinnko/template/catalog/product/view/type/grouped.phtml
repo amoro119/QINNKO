@@ -33,11 +33,6 @@
 ?>
 <?php $_product = $this->getProduct() ?>
 <?php $_associatedProducts = $this->getAssociatedProducts() ?>
-<?php if($_product->isSaleable() && count($_associatedProducts)): ?>
-    <p class="availability in-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('In stock') ?></span></p>
-<?php else: ?>
-    <p class="availability out-of-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('Out of stock') ?></span></p>
-<?php endif; ?>
 <?php echo $this->getChildHtml('product_type_data_extra') ?>
 <table class="data-table grouped-items-table" id="super-product-table">
     <thead>
@@ -120,7 +115,6 @@
 						<div class='detail-panel-content'>
 							<?php if ($hasOptions): ?>
 							<div class="options">
-								<h2><?php echo $this->__('Custom Options') ?>:</h2>
 								<?php
 									foreach($options as $option){
 										//echo "<label for=".'super-options-'.$_item->getId()." >".$option->getTitle()."</label>";
@@ -144,7 +138,6 @@
 							</div>
 							<?php endif ?>
 							<div class="description">
-								<h2><?php echo $this->__('Product Description') ?>:</h2>
 								<p><?php echo $this->helper('catalog/output')->productAttribute($_item, Mage::helper('core/string')->truncate($_item->getDescription(),160), 'description') ?></p>
 							</div>
 							<div>
