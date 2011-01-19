@@ -917,8 +917,8 @@ f/********** Product Prices > */
 .product-image-popup .image-label { font-size:12px; font-weight:bold; margin:0 0 10px; color:#2f2f2f; }
 
 /* Product Shop */
-.product-view .product-shop { float:right; width:363px; }
-.col1-layout .product-view .product-shop { float:right;	margin-bottom:25px;position:relative;visibility:visible;width:43%;padding-top:5px; }
+.product-view .product-shop {width:283px; }
+.col1-layout .product-view .product-shop { float:left;	margin-bottom:25px;position:relative;visibility:visible;padding-top:5px; }
 .col3-layout .product-view .product-shop { float:none; width:auto; }
 .product-view .product-shop .product-name { margin:5px 1px; }
 .product-view .product-shop .product-name h1 { font-family:Arial;font-size:2em;font-weight:bold;margin:0;padding:0;text-transform:none; }
@@ -1794,10 +1794,10 @@ div#tab3 .moreInfo {margin-bottom:0;}
 #size-charts {float:left;margin-bottom:10px;padding:0 0 0 30px;}
 #share-links{margin-top:16px;}
 #share-links a{text-decoration:none;}
-#share-links #tell-a-friend-link{background:url("../images/tellfriend-off.gif") 0 0 no-repeat;padding-left:30px;display:block;float:left;width:100px;}
-#share-links #tell-a-friend-link:hover{color:#999;}
+#tell-a-friend-link{background:url("../images/tellfriend-off.gif") 0 0 no-repeat;padding-left:30px;display:block;width:150px;margin-top:10px;}
+#tell-a-friend-link:hover{color:#999;}
 
-.add-to-cart button span{width:170px;background:transparent url(../images/addtoshoppingbag.jpg) 0 0 no-repeat;height:24px;}
+.add-to-cart button span{width:145px;background:transparent url(../images/addtoshoppingbag.gif) 0 0 no-repeat;height:23px;}
 
 .products-grid li.item h1{padding-left:30px;font-weight:bold;font-size:14px;}
 
@@ -2363,3 +2363,8 @@ html>/**/body .tdMainBasket .btnPurchase {padding-top:16px;}
 }
 .data-table tbody td.tdMainBasket{padding-right:0px;}
 #shopping-cart-totals-table{float:right}
+#add-bookmark-link{background:url(../images/share-off.gif) no-repeat 0 0;display: block;padding-left: 30px; width: 150px;}
+#add-bookmark-link:hover{color:#999;}
+.sharebox{float:right;width:150px;padding: 173px 0 0 0;}
+.product-wishlist{background:url(../images/addtowishlist.gif) no-repeat 2px 0;display: block;padding-left: 30px; width: 150px;margin-top:10px;}
+.product-wishlist a:hover{color:#999;}

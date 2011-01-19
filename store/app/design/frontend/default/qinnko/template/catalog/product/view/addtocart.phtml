@@ -34,7 +34,7 @@
         <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getMinimalQty($_product) ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty" />
         <?php endif; ?>
         <div id="size-charts">
-        	<a class="chart-image-link" href="javascript:launchPopUp('/size-conversion');" title="Size conversion chart"><img src="/skin/frontend/default/qinnko/images/sizingchart.gif" alt="Sizing charts" height="21" width="20"></a>        
+        	<a class="chart-image-link" href="javascript:launchPopUp('/size-conversion');" title="Size conversion chart"><img src="<?php echo $this->getSkinURL('images/sizingchart.gif') ?>" alt="Sizing charts" height="21" width="20"></a>        
         	<a href="javascript:launchPopUp('/size-conversion');" title="Size conversion chart" style="padding-left:10px;">Size conversion chart</a>
         </div>
 		<div class="clear"></div>

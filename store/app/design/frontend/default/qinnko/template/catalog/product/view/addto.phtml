@@ -30,7 +30,8 @@
                             <div class="wishlist " id="add-wishlist">
                                 <div class="product-wishlist">
                                 	<a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>">
-                                    <input type="image" name="wishlistAdd" src="/skin/frontend/default/qinnko/images/addtowishlist.jpg" border="0" class="wishlist" alt="Add to my wish list"></a>
+                                		<?php echo $this->__('Add to my wish list') ?>
+									</a>
                                             </div>
                                         </div>
 <?php endif; ?>
