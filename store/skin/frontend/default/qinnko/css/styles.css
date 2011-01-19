@@ -2137,9 +2137,7 @@ div#tab3 .moreInfo {margin-bottom:0;}
 	list-style:disc;
 }
 .onepage .page-title h1 {
-    background: #000000;
-    letter-spacing: 2px;
-    padding: 3px 7px 2px;
+    padding: 3px 7px 2px 0px;
     font-family:Georgia;
     float:left;
 }
@@ -2368,3 +2366,23 @@ html>/**/body .tdMainBasket .btnPurchase {padding-top:16px;}
 .sharebox{float:right;width:150px;padding: 173px 0 0 0;}
 .product-wishlist{background:url(../images/addtowishlist.gif) no-repeat 2px 0;display: block;padding-left: 30px; width: 150px;margin-top:10px;}
 .product-wishlist a:hover{color:#999;}
+#btn_register{background:url(../images/btn_register.gif) no-repeat 0 0;width:146px;}
+#btn_login{background:url(../images/btn_signin.gif) no-repeat 0 0;width:66px;}
+.loginbox .buttons-set{
+	margin-top:0px;
+}
+.loginbox #login-form  .form-list .input-box{
+	float:right;
+	clear:none;
+}
+.loginbox .form-list .input-box{width:auto;}
+.loginbox  .col2-set .col-1{
+	border-right:1px solid;
+}
+.loginbox  .col2-set .col-1 p{
+	height:100px;
+	width:222px;
+}
+.loginbox .col-1 .buttons-set {
+	margin-right:20px;
+}
