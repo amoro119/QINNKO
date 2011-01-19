@@ -48,28 +48,24 @@
 </div>
 <?php endif; ?>
 <?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
+	<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/mzp-packed.js') ?>"></script>
+	<link rel="stylesheet" href="<?php echo $this->getSkinUrl('css/magiczoomplus.css') ?>" type="text/css" media="screen" charset="utf-8" />
 <div  class="product-image-wrap">
 <div class="product-image-bg">
-	<div class="zoom">
-	    <img id="zoom_out" src="<?php echo $this->getSkinUrl('images/slider_btn_zoom_out.gif') ?>" alt="<?php echo $this->__('Zoom Out') ?>" title="<?php echo $this->__('Zoom Out') ?>" class="btn-zoom-out" />
-	    <div id="track">
-	        <div id="handle"></div>
-	    </div>
-	    <img id="zoom_in" src="<?php echo $this->getSkinUrl('images/slider_btn_zoom_in.gif') ?>" alt="<?php echo $this->__('Zoom In') ?>" title="<?php echo $this->__('Zoom In') ?>" class="btn-zoom-in" />
-	</div>
 <p class="product-image product-image-zoom">
     <?php
-        $_img = '<img id="image" src="'.$this->helper('catalog/image')->init($_product, 'image').'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
-        echo $_helper->productAttribute($_product, $_img, 'image');
+        $_img = '<a class="MagicZoom" href="'.$this->helper('catalog/image')->init($_product, 'image').'" rel="zoom-position:inner;zoom-fade: true"><img id="image" style="width:290px" src="'.$this->helper('catalog/image')->init($_product, 'thumbnail').'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" /></a>';
+        // echo $_helper->productAttribute($_product, $_img, 'image');
+		echo $_img;
     ?>
 </p>
 </div>
 <script type="text/javascript">
 //<![CDATA[
-    Event.observe(window, 'load', function() {
-        product_zoom = new Product.Zoom('image', 'track', 'handle', 'zoom_in', 'zoom_out', 'track_hint');
-		jQuery('.product-image-bg').hover(function(e){jQuery('.zoom').fadeToggle();});
-    });
+		    // Event.observe(window, 'load', function() {
+		        // product_zoom = new Product.Zoom('image', 'track', 'handle', 'zoom_in', 'zoom_out', 'track_hint');
+		// jQuery('.product-image-bg').hover(function(e){jQuery('.zoom').fadeToggle();});
+		    // });
 //]]>
 </script>
 <?php else: ?>
