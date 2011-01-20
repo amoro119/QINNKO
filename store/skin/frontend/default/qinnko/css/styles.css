@@ -99,7 +99,7 @@ ul,ol         { list-style:none; }
 .main { background:#fff; padding:0px 25px 0px 25px; min-height:350px;overflow:hidden;width:910px;}
 
 /* Base Columns */
-.col-left { float:left; width:222px; background:#000000;margin-bottom:-9999px;padding:0 0 9999px; }
+.col-left { float:left; width:224px; background:#000000;margin-bottom:-9999px;padding:0 0 9999px; }
 .col-main { float:left; width:686px; padding:0 0 0px; }
 .col-right { float:right; width:220px; padding:0 0 1px; }
 
