@@ -883,7 +883,7 @@ f/********** Product Prices > */
 
 .product-view {}
 
-.product-essential { padding:25px 0 25px; }
+.product-essential { padding:25px 0 0px 0; }
 .product-essential h2 { font:bold 12px/1.25 Arial, Helvetica, sans-serif; }
 
 .product-collateral {}
@@ -893,10 +893,10 @@ f/********** Product Prices > */
 /* Product Images */
 .product-view .product-img-box { float:left; width:50%; }
 .col3-layout .product-view .product-img-box { float:none; margin:0 auto; }
-.product-view .product-img-box .product-image { margin:0 0 10px;left:14px;top:10px;text-align:center;line-height:429px;
-}
+.product-view .product-img-box .product-image { margin:0 0 10px;left:14px;top:10px;text-align:center;line-height:429px;background:url(../images/zoom.gif) no-repeat center bottom;}
+.product-view .product-img-box .product-image a{}
 .product-view .product-img-box .product-image img{vertical-align:middle;}
-.product-view .product-img-box .product-image-zoom { position:relative; width:290px; height:400px; overflow:hidden; z-index:9;  }
+.product-view .product-img-box .product-image-zoom { position:relative; width:290px; height:400px; z-index:9;  }
 .product-view .product-img-box .product-image-zoom img { position:absolute; left:0; top:0; cursor:move; }
 .product-view .product-img-box .zoom-notice { margin:0 0 10px; text-align:center; }
 .product-view .product-img-box .zoom { display:none; position:absolute; z-index:90; height:24px; margin:0 auto 13px; padding:0 28px;-moz-opacity:.4; -webkit-opacity:.4; background:#000; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";/*IE8*/ opacity:.4; right:10px; bottom:10px;}
@@ -932,7 +932,7 @@ f/********** Product Prices > */
 .product-view .product-shop .product-options-bottom .paypal-logo { float:left; }
 
 /* Product Options */
-.product-options { margin:5px 0 0; padding:0 0px 10px;  }
+.product-options { margin:5px 0 0; padding:0 0px 10px;height:100px;overflow:hidden;  }
 .product-options dt { padding:10px 0 0; font-weight:normal; }
 .product-options dt label { font-weight:bold; }
 .product-options dt span.required { color:#eb340a; }
@@ -1716,9 +1716,6 @@ z-index:2;
 	padding-left:20px;
 }
 .product-image-bg{
-	width:316px;
-	height:429px;
-	position:relative;
 }
 /*scrollable items*/
 #up-arrow{float:left; height: 20px; width:100%; background-position:center; margin-bottom:8px; text-align:center; cursor:pointer;}
@@ -1730,7 +1727,7 @@ z-index:2;
 
 .pager .pages a{color:#666666;padding:0 4px;}
 /*-------------------- TAB VIEW -------------------*/
-#tabbed-info{margin-bottom:15px; }
+#tabbed-info{}
 #tabbed-info .yui-nav li{margin-right:3px !important; float:left; list-style:none; vertical-align:bottom;}/*spacing between tabs*/
 #tabbed-info .yui-nav{padding-bottom:0;margin-bottom:0;}
 #tabbed-info .yui-nav li.selected{margin-bottom:-1px !important; position:relative;width:70px}/* hide bottom border on selected tab */
@@ -1740,11 +1737,11 @@ z-index:2;
 #tabbed-info .yui-nav .selected a, #tabbed-info .yui-nav .selected a:hover{background:#fff;}
 #tabbed-info .yui-nav .selected a{padding-bottom:1px; color:#333; border-left:1px solid #9c9ea0; border-top:1px solid #9c9ea0;}
 #tabbed-info .yui-nav .selected a img{line-height:12px; overflow:hidden;}
-#tabbed-info .yui-content{height:13.4em; font-family:Arial, Verdana, sans-serif; font-size:90%; background-color:#fff; padding-top:0; padding-bottom:0;overflow:hidden;}
+#tabbed-info .yui-content{height:140px; font-family:Arial, Verdana, sans-serif; font-size:90%; background-color:#fff; padding-top:0; padding-bottom:0;overflow:hidden;}
 
 #tabbed-info .yui-content div#tab2, #tabbed-info .yui-content div#tab3 {display:none;}
 #tabbed-info .yui-content div#tab1 {display:block;}
-#tabbed-info .yui-content .productDescription{width:77%; padding-left:0px; /*left needs to be padding to work in IE*/ padding-top:10px; margin-right:15px;}
+#tabbed-info .yui-content .productDescription{padding-left:0px; /*left needs to be padding to work in IE*/ padding-top:10px; }
 
 #tabbed-info .yui-content a{font-weight:bold;}
 #tabbed-info .yui-content a:hover{color:#FFF; background:#000; text-decoration:none;}
@@ -1772,15 +1769,15 @@ div#tab3 .moreInfo {margin-bottom:0;}
 .yui-nav .selected a .tl{background:transparent url('../images/tab_selected_tl.gif') no-repeat;}
 .yui-nav .selected a .tr{background:transparent url('../images/tab_selected_tr.gif') no-repeat;}
 /*tab view shadows*/
-.shadow-btm{display:block;	width:100%; height:13px;  margin-bottom:10px;}
+.shadow-btm{}
 .top-line{clear:both; height:1px; background-color: #999; width:346px; overflow:hidden;}/*overflow hidden fixes ie6 empty div bug*/
 /*----------------- PRODUCT PAGES -----------------*/
 /*expand details section on product page*/
 .expand-details {float:right; position:absolute; bottom:5px; right:75px; text-transform:uppercase; overflow:hidden;height:9px;}
-#tabbed-info .yui-content {height:180px; position:relative;}
+#tabbed-info .yui-content {height:140px; position:relative;}
 .long-description {display:none;}
 
-#tabbed-info .yui-content {height:13.4em; position:relative;font-size:12px;}
+#tabbed-info .yui-content {height:160px; position:relative;font-size:12px;}
 #tabbed-info .yui-content a.expand-details:hover {background-color:transparent;}
 #tabbed-info .yui-content a.expand-details:hover {background:url("../images/pp-more-info.gif") no-repeat; display:block; width:71px; height:9px;}
 #tabbed-info .yui-content a.open:hover {background:url("../images/pp-close.gif") no-repeat; display:block; width:50px; height:9px;}
@@ -2388,3 +2385,4 @@ html>/**/body .tdMainBasket .btnPurchase {padding-top:16px;}
 .loginbox .col-1 .buttons-set {
 	margin-right:20px;
 }
+.MagicZoomBigImageCont{border:1px solid #999999;padding-bottom:18px;background:#fff;}
