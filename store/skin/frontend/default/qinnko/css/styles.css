@@ -26,7 +26,7 @@
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
 
-body          { background:url(../images/bg.jpg) repeat-x 0 0; font:12px/1.55 arial, helvetica, sans-serif; color:#000; text-align:center; }
+body          { background:url(../images/bg.jpg) repeat-x 0 0; font:12px/1.55 microsoft yahei, arial, helvetica, sans-serif; color:#000; text-align:center; }
 
 img           { border:0; vertical-align:top; }
 
@@ -91,12 +91,12 @@ ul,ol         { list-style:none; }
 
 /* Layout ================================================================================ */
 .wrapper {}
-.page { width:960px; margin:0px auto 0; text-align:left;}
+.page { width:800px; margin:0px auto 0; text-align:left;}
 .page-print { background:#fff; padding:25px 30px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
-.main-container {background:#fff;padding-bottom:25px;}
-.main { background:#fff; padding:0px 25px 0px 25px; min-height:350px;overflow:hidden;width:910px;}
+.main-container {background:#fff;padding-bottom:20px;}
+.main { background:#fff; padding:0px 20px 0px 20px; min-height:350px;overflow:hidden;width:760px;}
 
 /* Base Columns */
 .col-left { float:left; width:224px; background:#000000;margin-bottom:-9999px;padding:0 0 9999px; }
@@ -455,8 +455,8 @@ tr.summary-details-excluded { font-style:italic; }
 .logo { float:left; }
 .header-container {background:#fff; }
 
-.header { margin:0 0 0;padding:0 25px;}
-.header .logo { float:left; text-decoration:none !important; }
+.header { margin:0 0 0;padding:0 20px;}
+.header .logo { float:left; text-decoration:none !important;padding-top:10px; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 
 .header .top-promo { float:left; width:117px; height:30px; margin:12px 10px 0; background:url(../images/bkg_top-promo.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
@@ -479,7 +479,7 @@ tr.summary-details-excluded { font-style:italic; }
 .top-bar .breadcrumbs { float:left; width:580px; overflow:hidden; }
 .form-search { float:right;padding-top:3px; }
 .form-search label { float:left; font-size:12px; font-weight:bold; padding:0 5px 0 0; }
-.form-search input.input-text { float:left; width:212px; margin-right:5px; }
+.form-search input.input-text { float:left; width:178px; margin-right:5px; }
 .form-search button.button { float:left; }
 .form-search button.button span { height:23px; background-image:url(../images/bkg_btn-small.png); line-height:21px; }
 .form-search .search-autocomplete { z-index:999; }
@@ -493,7 +493,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /********** < Navigation */
 .nav-container {}
-#nav { float:left;  font-size:16px;margin:0 0 0 0px;}
+#nav { float:left;  font-size:12px;margin:0 0 0 0px;}
 
 /* All Levels */ /* Style consistent throughout all nav levels */
 #nav li { position:relative;text-transform:uppercase; text-align:left;	}
@@ -504,7 +504,7 @@ tr.summary-details-excluded { font-style:italic; }
 #nav li ul span {white-space:normal; }
 
 /* 0 Level */
-#nav li { float:left; margin:1px 8px 11px 1px; padding:3px 20px 3px 3px; }
+#nav li { float:left; margin:1px 8px 11px 1px; padding:3px 0px 3px 3px; }
 #nav li.active a { color:#000;font-weight:bold; }
 #nav a { float:left; padding-right:11px; color:#929292; font-weight:normal; }
 #nav li.over a,
@@ -1062,7 +1062,7 @@ f/********** Product Prices > */
 .advanced-search-summary p { clear:both; font-weight:bold; margin:0; }
 
 /* CMS Home Page */
-.cms-home .main { padding:0px 25px 0px 25px; }
+.cms-home .main {}
 .cms-home .subtitle {}
 .cms-index-index .subtitle {}
 
@@ -2387,3 +2387,5 @@ html>/**/body .tdMainBasket .btnPurchase {padding-top:16px;}
 	margin-right:20px;
 }
 .MagicZoomBigImageCont{border:1px solid #999999;padding-bottom:18px;background:#fff;}
+.header1{height:60px;}
+.header2{height:25px;}
