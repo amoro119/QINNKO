@@ -1989,7 +1989,7 @@ div#tab3 .moreInfo {margin-bottom:0;}
 	width:375px;
 }
 .col2-set .registered-users{
-	width:525px;
+	overflow:hidden;
 }
 .new-users h1{
 	color:#fff;
