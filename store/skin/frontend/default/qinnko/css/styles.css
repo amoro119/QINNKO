@@ -881,7 +881,7 @@ f/********** Product Prices > */
 .add-to-box .add-to-links li .separator { display:none !important; }
 
 
-.product-view {}
+.product-view {position:relative;}
 
 .product-essential { padding:25px 0 0px 0; }
 .product-essential h2 { font:bold 12px/1.25 Arial, Helvetica, sans-serif; }
@@ -896,7 +896,7 @@ f/********** Product Prices > */
 .product-view .product-img-box .product-image { margin:0 0 10px;left:14px;top:10px;text-align:center;line-height:429px;background:url(../images/zoom.gif) no-repeat center bottom;}
 .product-view .product-img-box .product-image a{}
 .product-view .product-img-box .product-image img{vertical-align:middle;}
-.product-view .product-img-box .product-image-zoom { position:relative; width:290px; height:400px; z-index:9;  }
+.product-view .product-img-box .product-image-zoom { position:relative; width:240px; height:400px; z-index:9;  }
 .product-view .product-img-box .product-image-zoom img { position:absolute; left:0; top:0; cursor:move; }
 .product-view .product-img-box .zoom-notice { margin:0 0 10px; text-align:center; }
 .product-view .product-img-box .zoom { display:none; position:absolute; z-index:90; height:24px; margin:0 auto 13px; padding:0 28px;-moz-opacity:.4; -webkit-opacity:.4; background:#000; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";/*IE8*/ opacity:.4; right:10px; bottom:10px;}
@@ -1713,7 +1713,7 @@ z-index:2;
 }
 .product-image-wrap{
 	float:left;
-	padding-left:20px;
+	padding:0 10px;
 }
 .product-image-bg{
 }
@@ -1822,7 +1822,7 @@ div#tab3 .moreInfo {margin-bottom:0;}
 }
 
 .jcarousel-skin-tango .jcarousel-clip-horizontal {
-    width: 900px;
+    width: 750px;
     border:solid #F5F5F0;
     border-width:0 5px;
 }
@@ -2363,7 +2363,7 @@ html>/**/body .tdMainBasket .btnPurchase {padding-top:16px;}
 #shopping-cart-totals-table{float:right}
 #add-bookmark-link{background:url(../images/share-off.gif) no-repeat 0 0;display: block;padding-left: 30px; width: 150px;}
 #add-bookmark-link:hover{color:#999;}
-.sharebox{float:right;width:150px;padding: 173px 0 0 0;}
+.sharebox{position:absolute;width:150px;top: 240px;right:0;}
 .product-wishlist{background:url(../images/addtowishlist.gif) no-repeat 2px 0;display: block;padding-left: 30px; width: 150px;margin-top:10px;}
 .product-wishlist a:hover{color:#999;}
 #btn_register{background:url(../images/btn_register.gif) no-repeat 0 0;width:146px;}
