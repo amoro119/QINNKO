@@ -2321,7 +2321,7 @@ div#tab3 .moreInfo {margin-bottom:0;}
 html>body .basketItemWrapper {min-height:181px; height:auto;}
 html>/**/body .basketItemWrapper {float:left;}
 .basketItemWrapper img.skuImage {border: 1px solid #EBEBEB; float:left; margin:19px 0px 0px 10px;}
-.basketItemInfo {float:left; width:738px; padding-bottom:5px;}
+.basketItemInfo {float:left; width:587px; padding-bottom:5px;}
 .basketItemWrapper .iconList {margin-left:10px;}
 
 .basketItemRow2 {clear:both; border-top:1px solid #EBEBEB; border-bottom:1px solid #EBEBEB; margin-left:0px; margin-bottom:5px; padding-top:4px; height:29px; margin-top:8px;}
