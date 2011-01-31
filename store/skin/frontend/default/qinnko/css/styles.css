@@ -1966,6 +1966,7 @@ div#tab3 .moreInfo {margin-bottom:0;}
 
 .detail-panel-wrapper{
 	position:relative;
+	z-index:99;
 }
 .warnning-required-options{
 	color:red;
