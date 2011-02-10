@@ -1,0 +1,8 @@
+<config>
+    <modules>
+		<Xtunes_Product>
+				<active>true</active>
+				<codePool>local</codePool>
+		</Xtunes_Product>
+	</modules>
+</config>

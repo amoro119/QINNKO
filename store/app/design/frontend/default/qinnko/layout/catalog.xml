@@ -206,6 +206,8 @@ Product view
                     <action method="setColumnCount"><columns>6</columns></action>
                     <action method="setItemLimit"><type>upsell</type><limit>100</limit></action>
                 </block>
+                <block type="xtunes_product/siblings" name="product.info.siblings" as="siblings" template="catalog/product/list/siblings.phtml">
+                </block>
                 
                 <block type="catalog/product_view_tabs" name="product.info.tabs" as="info_tabs" template="catalog/product/view/tabs.phtml" >
                     <action method="addTab" translate="title" module="catalog"><alias>description</alias><title>Product Description</title><block>catalog/product_view_description</block><template>catalog/product/view/description.phtml</template></action>

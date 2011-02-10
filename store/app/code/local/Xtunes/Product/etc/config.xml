@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Xtunes_Product>
+			<version>0.1.0</version>
+		</Xtunes_Product>
+	</modules>
+	<global>
+		<blocks>
+			<xtunes_product>
+				<class>Xtunes_Product_Block</class>
+            </xtunes_product>
+		</blocks>
+	</global>
+</config>
