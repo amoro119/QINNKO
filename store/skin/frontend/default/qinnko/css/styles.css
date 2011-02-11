@@ -1737,7 +1737,7 @@ z-index:2;
 #tabbed-info .yui-nav .selected a, #tabbed-info .yui-nav .selected a:hover{background:#fff;}
 #tabbed-info .yui-nav .selected a{padding-bottom:1px; color:#333; border-left:1px solid #9c9ea0; border-top:1px solid #9c9ea0;}
 #tabbed-info .yui-nav .selected a img{line-height:12px; overflow:hidden;}
-#tabbed-info .yui-content{height:140px; font-family:Arial, Verdana, sans-serif; font-size:90%; background-color:#fff; padding-top:0; padding-bottom:0;overflow:hidden;}
+#tabbed-info .yui-content{height:140px;mini-height:140px; font-family:Arial, Verdana, sans-serif; font-size:90%; background-color:#fff; padding-top:0; padding-bottom:0;overflow:hidden;}
 
 #tabbed-info .yui-content div#tab2, #tabbed-info .yui-content div#tab3 {display:none;}
 #tabbed-info .yui-content div#tab1 {display:block;}
@@ -1751,7 +1751,7 @@ z-index:2;
 #tab3 p[class^="moreInfo"] {margin-bottom:10px;}/*ie7 hack*/
 div#tab3 .moreInfo {margin-bottom:0;}
 .yui-content #tab3 p.moreInfo{position:relative; bottom:-10px;height:18px;}
-.yui-content #tab1 .productDescription, .yui-content #tab2 .productDescription, .yui-content #tab3 .productDescription {height:8.3em;}
+.yui-content #tab1 .productDescription, .yui-content #tab2 .productDescription, .yui-content #tab3 .productDescription {height:135px;overflow:hidden;}
 .yui-content #tab1 .productDescription p, .yui-content #tab2 .productDescription p{float:left;}
 .yui-content #tab1 p.moreInfo,.yui-content #tab2 p.moreInfo{float:left; margin-top:10px;}
 .yui-content p.moreInfo .product-code{font-weight:normal;}
@@ -1774,7 +1774,6 @@ div#tab3 .moreInfo {margin-bottom:0;}
 /*----------------- PRODUCT PAGES -----------------*/
 /*expand details section on product page*/
 .expand-details {float:right; position:absolute; bottom:5px; right:75px; text-transform:uppercase; overflow:hidden;height:9px;}
-#tabbed-info .yui-content {height:140px; position:relative;}
 .long-description {display:none;}
 
 #tabbed-info .yui-content {height:160px; position:relative;font-size:12px;}

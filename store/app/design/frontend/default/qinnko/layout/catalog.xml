@@ -269,7 +269,10 @@ Additional block dependant on product type
             <block type="catalog/product_view_type_simple" name="product.info.simple" as="product_type_data" template="catalog/product/view/type/simple.phtml">
                 <block type="core/text_list" name="product.info.simple.extra" as="product_type_data_extra"/>
             </block>
-        </reference>
+            <block type="catalog/product_view" name="product.info.share" as="sharebox" template="catalog/product/view/sharebox.phtml">
+            	<block type="catalog/product_view" name="product.info.addto" as="addto" template="catalog/product/view/addto.phtml"/>
+        	</block>
+         </reference>
     </PRODUCT_TYPE_simple>
     <PRODUCT_TYPE_configurable translate="label" module="catalog">
         <label>Catalog Product View (Configurable)</label>

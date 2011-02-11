@@ -1,0 +1,12 @@
+
+            <div class="sharebox">
+                    <a href="#" id="add-bookmark-link">
+                                <?php echo $this->__('SHARE') ?>
+                    </a>
+                    <?php echo $this->getChildHtml('addto') ?>
+                                		<?php if ($this->canEmailToFriend()): ?>
+            		<a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($this->getProduct()) ?>" id="tell-a-friend-link">
+                                <?php echo $this->__('Email to a Friend') ?>
+                    </a>
+                                        <?php endif; ?>
+            </div>

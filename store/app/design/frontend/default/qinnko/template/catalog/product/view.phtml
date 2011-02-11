@@ -83,17 +83,7 @@
             <?php endif;?>
 -->
         </div>
-            <div class="sharebox">
-            		<?php if ($this->canEmailToFriend()): ?>
-                    <a href="#" id="add-bookmark-link">
-                                <?php echo $this->__('SHARE') ?>
-                    </a>
-                    <?php endif; ?>
-                    <?php echo $this->getChildHtml('addto') ?>
-            		<a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>" id="tell-a-friend-link">
-                                <?php echo $this->__('Email to a Friend') ?>
-                    </a>
-            </div>
+<?php echo $this->getChildHtml('sharebox');?>
 
         <div class="clearer"></div>
 
